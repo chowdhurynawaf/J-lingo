@@ -11,14 +11,14 @@ import UIKit
 final class SplashVC: UIViewController {
     
     
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var roundView: SphereView!
-    @IBOutlet weak var sunImageView: UIImageView!
-    @IBOutlet weak var roundViewCenterY: NSLayoutConstraint!
-    @IBOutlet weak var jLingoLbl: UILabel!
-    @IBOutlet weak var mountfujiView: MountFujiView!
-    @IBOutlet weak var fujiImageView: UIImageView!
-    @IBOutlet weak var fujiImageWidthCons: NSLayoutConstraint!
+    @IBOutlet weak private var containerView: UIView!
+    @IBOutlet weak private var roundView: SphereView!
+    @IBOutlet weak private var sunImageView: UIImageView!
+    @IBOutlet weak private var roundViewCenterY: NSLayoutConstraint!
+    @IBOutlet weak private var jLingoLbl: UILabel!
+    @IBOutlet weak private var mountfujiView: MountFujiView!
+    @IBOutlet weak private var fujiImageView: UIImageView!
+    @IBOutlet weak private var fujiImageWidthCons: NSLayoutConstraint!
     
     //MARK: - Properties
     
@@ -29,7 +29,7 @@ final class SplashVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //self.animateWholeView()
-        self.moveToLogin()
+        self.move()
         
     }
     
@@ -39,6 +39,11 @@ final class SplashVC: UIViewController {
     //MARK: - Selectors
     
     //MARK: - helpers
+    
+    private func hideNav() {
+        
+        self.navigationController?.navigationBar.isHidden = true
+    }
     
     private func animateAppTitle() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
@@ -90,6 +95,13 @@ final class SplashVC: UIViewController {
             })
             
         }
+    }
+    
+    private func move() {
+        let vc = EmailLoginVC(nibName: "EmailLoginVC", bundle: nil)//OptionVC()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

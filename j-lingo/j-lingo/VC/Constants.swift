@@ -17,7 +17,7 @@ extension Constants{
         static let screenheight = UIScreen.main.bounds.height
     }
     struct Colors {
-        static let appcolor: UIColor = UIColor.red
-        static let neogreen : UIColor = UIColor.green
+        static let appcolor: UIColor = UIColor(hex: "#FB281C")!
+        static let neogreen : UIColor = UIColor.systemGreen.withAlphaComponent(0.6)
     }
 }

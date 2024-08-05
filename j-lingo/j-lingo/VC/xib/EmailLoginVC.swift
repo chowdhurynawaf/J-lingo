@@ -6,27 +6,114 @@
 //
 
 import UIKit
+import Lottie
+import Hero
+import SDWebImage
 
-class EmailLoginVC: UIViewController {
+
+
+final class EmailLoginVC: UIViewController {
     
-    @IBOutlet weak var parentView: UIView!
+    @IBOutlet weak private var parentView: UIView!
+    @IBOutlet weak private var redWaveView: LottieAnimationView!
+    @IBOutlet weak private var upperLeftWaveImgView: UIView!
+    @IBOutlet weak private var credentialHolderView: UIView!
+    @IBOutlet weak private var toplogin: UILabel!
+    @IBOutlet weak private var LoginBtnHolderView: UIView!
+    @IBOutlet weak private var loginBtn: MHSoftUIButton!
+    @IBOutlet weak private var eyeView: LottieAnimationView!
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var showPassBtn: UIButton!
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.parentView.backgroundColor = .red
+        self.hideNav()
+        self.showRedWaveAnimation()
+        self.showeyeAnimation()
+        tappedOnForgotPassword(self)
+        
+        
+        
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        credentialHolderView.addNeumorphicEffect()
+        loginBtn.addSoftUIEffectForButton(cornerRadius: 8, themeColor: Constants.Colors.appcolor)
+        self.animateLoginLbl()
+        
     }
-    */
-
+    
+    deinit {
+        
+        self.redWaveView.stop()
+        self.eyeView.stop()
+        
+    }
+    
+    private func hideNav() {
+        
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    
+    private func showRedWaveAnimation() {
+        self.redWaveView.loopMode = .autoReverse
+        self.redWaveView.contentMode = .scaleToFill
+        self.redWaveView.play()
+        
+    }
+    
+    private func showeyeAnimation() {
+        self.eyeView.loopMode = .autoReverse
+        self.eyeView.contentMode = .scaleToFill
+        self.eyeView.play()
+    }
+    
+    private func animateLoginLbl  () {
+       
+        ToastHelper.showToast()
+        self.toplogin.zoomIn(duration: 2.0) { _ in
+            
+        }
+    }
+    
+    private func showChangView() {
+        
+        let vc = ChangVC(nibName: "ChangVC", bundle: nil)
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
+    @IBAction func loginBtnTapped(_ sender: Any) {
+        
+        self.showChangView()
+    }
+    
+    
+    @IBAction func eyeBtnTapped(_ sender: Any) {
+        
+        
+    }
+    
+    
+    @IBAction func tappedOnForgotPassword(_ sender: Any) {
+        
+        let vc = ForgotPasswordVC(nibName: "ForgotPasswordVC", bundle: nil)
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
 }
+
+

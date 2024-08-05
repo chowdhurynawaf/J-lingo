@@ -13,8 +13,7 @@ import UIKit
 class MountFujiView: UIView {
     
     override func draw(_ rect: CGRect) {
-            guard let context = UIGraphicsGetCurrentContext() else { return }
-
+            
             // Draw background
             UIColor.white.setFill()
             UIRectFill(rect)
