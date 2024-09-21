@@ -13,7 +13,37 @@ struct Constants{}
 
 extension Constants{
     
+
+    struct Kanji  {
+        
+        static let k1: [String: String] = [
+            "上": "Above",
+            "下": "Below",
+            "大": "Big",
+            "工": "Construction",
+            "八": "Eight",
+            "入": "Enter",
+            "山": "Mountain",
+            "口": "Mouth",
+            "九": "Nine",
+            "一": "One",
+            "人": "Person",
+            "力": "Power",
+            "川": "River",
+            "七": "Seven",
+            "十": "Ten",
+            "三": "Three",
+            "二": "Two",
+            "女": "Woman"
+        ]
+    }
     
+    struct QuizURl {
+        
+        static let DQ_1 = "https://docs.google.com/forms/d/e/1FAIpQLScPsOAGhJvEazoGUN7y0Fm1qYIdYGU04vgRn0QiGv1pVGcubQ/viewform?hr_submission=ChkI7bnB-pkUEhAI2_y19b8TEgcI3fiY9b8TEAE"
+        
+        static let WQ_1 = "https://docs.google.com/forms/d/e/1FAIpQLSdprh0g966v031JAmnQgXvEsCprr-N0FW-vP4VQdXm89iaiXw/viewform?hr_submission=ChkI7bnB-pkUEhAI0fy19b8TEgcI3fiY9b8TEAE"
+    }
     
     struct WH {
         

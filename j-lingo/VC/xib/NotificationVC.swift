@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 final class NotificationVC: BaseCVVC, UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
  
@@ -65,5 +66,23 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
     return 1
 }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        switch indexPath.item {
+        case 0:
+            SafariHelper.openURL(Constants.QuizURl.WQ_1, from: self)
+        case 1:
+            SafariHelper.openURL(Constants.QuizURl.DQ_1, from: self)
+        case 2:
+            pushWithData(ofType: MessageVC.self){ vc in
+                vc.name = "Bob Marley"
+                
+            }
+            
+        default:
+            print("")
+        }
+    }
 
 }

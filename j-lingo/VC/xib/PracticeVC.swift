@@ -89,11 +89,16 @@ final class PracticeVC:UIViewController{
         case PracticeFlag.wh.rawValue:
             remainingArr = Array(Constants.WH.dic.keys).shuffled()
             dic = Constants.WH.dic
+        case PracticeFlag.kanji.rawValue:
+            remainingArr = Array(Constants.Kanji.k1.keys).shuffled()
+            dic = Constants.Kanji.k1
         default:
             print("")
         }
         
-        current = remainingArr.removeLast()
+        if remainingArr.count > 0 {
+            current = remainingArr.removeLast()
+        }
         inputTextField.text = ""
         keyLabel.text = current
         resultLabel.text = ""

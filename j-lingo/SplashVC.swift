@@ -34,7 +34,8 @@ final class SplashVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.animateWholeView()
+        self.movetoGames()
+        //self.animateWholeView()
         //self.move()
         //self.gotoTabBar()
         
@@ -174,6 +175,9 @@ final class SplashVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    private func movetoGames() {
+        pushViewController(ofType: GameVC.self)
+    }
     
     private func animateMountFuji() {
         self.mountfujiView.isHidden = false

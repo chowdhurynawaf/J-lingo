@@ -80,19 +80,29 @@ extension GameVC {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let vc = PracticeVC(nibName: "PracticeVC", bundle: nil)
+        
         
         switch indexPath.item {
         case 0:
             print("")
             let aivc = AIVC(nibName: "AIVC", bundle: nil)
             self.navigationController?.pushViewController(aivc, animated: true)
+            break
         case 1:
+            let vc = PracticeVC(nibName: "PracticeVC", bundle: nil)
             vc.flag = PracticeFlag.hiragana.rawValue
             self.navigationController?.pushViewController(vc, animated: true)
+            break
         case 2:
+            let vc = PracticeVC(nibName: "PracticeVC", bundle: nil)
             vc.flag = PracticeFlag.katakana.rawValue
             self.navigationController?.pushViewController(vc, animated: true)
+            break
+        case 3:
+            pushWithData(ofType: PracticeVC.self){ vc in
+                vc.flag = PracticeFlag.kanji.rawValue
+            }
+            break
         case 6:
             pushWithData(ofType: PracticeVC.self) { vc in
                 vc.flag = PracticeFlag.wh.rawValue
@@ -100,5 +110,7 @@ extension GameVC {
         default:
             print("")
         }
+        
+        
     }
 }
