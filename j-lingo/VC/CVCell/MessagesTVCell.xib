@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessagesCVCell" rowHeight="197" id="KGk-i7-Jjw">
+            <rect key="frame" x="0.0" y="0.0" width="497" height="197"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="497" height="197"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiq-ix-9bK">
+                        <rect key="frame" x="0.0" y="0.0" width="497" height="197"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jEv-ax-Slk">
+                                <rect key="frame" x="10" y="167" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ATe-s6-HGH"/>
+                                    <constraint firstAttribute="width" constant="25" id="SRW-4y-mv6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="12.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tBm-K2-gz6">
+                                <rect key="frame" x="45" y="74" width="199" height="118"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.29830791144971025" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EHI-Ho-EZ7">
+                                <rect key="frame" x="288" y="5" width="199" height="118"/>
+                                <color key="backgroundColor" red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="0.20005545710885761" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tBm-K2-gz6" firstAttribute="width" secondItem="uiq-ix-9bK" secondAttribute="width" multiplier="0.4" id="6XK-p2-bEH"/>
+                            <constraint firstAttribute="trailing" secondItem="EHI-Ho-EZ7" secondAttribute="trailing" constant="10" id="8AV-KY-dPe"/>
+                            <constraint firstItem="EHI-Ho-EZ7" firstAttribute="top" secondItem="uiq-ix-9bK" secondAttribute="top" constant="5" id="DGQ-g5-f7b"/>
+                            <constraint firstItem="jEv-ax-Slk" firstAttribute="leading" secondItem="uiq-ix-9bK" secondAttribute="leading" constant="10" id="OCU-ne-zwr"/>
+                            <constraint firstAttribute="bottom" secondItem="jEv-ax-Slk" secondAttribute="bottom" constant="5" id="X7l-Jy-Omu"/>
+                            <constraint firstItem="EHI-Ho-EZ7" firstAttribute="height" secondItem="uiq-ix-9bK" secondAttribute="height" multiplier="0.6" id="aOJ-xK-csO"/>
+                            <constraint firstItem="tBm-K2-gz6" firstAttribute="bottom" secondItem="jEv-ax-Slk" secondAttribute="bottom" id="ffc-mP-XrO"/>
+                            <constraint firstItem="tBm-K2-gz6" firstAttribute="height" secondItem="uiq-ix-9bK" secondAttribute="height" multiplier="0.6" id="iEC-e8-UWL"/>
+                            <constraint firstItem="tBm-K2-gz6" firstAttribute="leading" secondItem="jEv-ax-Slk" secondAttribute="trailing" constant="10" id="my0-Zn-Bz5"/>
+                            <constraint firstItem="EHI-Ho-EZ7" firstAttribute="width" secondItem="uiq-ix-9bK" secondAttribute="width" multiplier="0.4" id="onr-nl-VIk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uiq-ix-9bK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="08p-gy-GWh"/>
+                    <constraint firstItem="uiq-ix-9bK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LSl-L7-BWq"/>
+                    <constraint firstAttribute="bottom" secondItem="uiq-ix-9bK" secondAttribute="bottom" id="Vez-TF-PSD"/>
+                    <constraint firstAttribute="trailing" secondItem="uiq-ix-9bK" secondAttribute="trailing" id="jen-So-ESn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="img" destination="jEv-ax-Slk" id="yZH-F7-P7M"/>
+                <outlet property="p1textView" destination="EHI-Ho-EZ7" id="bWg-Gt-20R"/>
+                <outlet property="p2textView" destination="tBm-K2-gz6" id="csy-AT-Nbp"/>
+            </connections>
+            <point key="canvasLocation" x="265.94202898550725" y="120.20089285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

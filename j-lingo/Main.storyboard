@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3PD-Mk-v57">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Amsterdam.ttf">
+            <string>Amsterdam</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--SplashVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SplashVC" customModule="j_lingo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ST-EH-9va">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZu-xp-IO9" customClass="SphereView" customModule="j_lingo" customModuleProvider="target">
+                                        <rect key="frame" x="134.5" y="375.5" width="145" height="145"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOC-yl-zQY">
+                                                <rect key="frame" x="48" y="5" width="49" height="135"/>
+                                                <fontDescription key="fontDescription" name="Amsterdam" family="Amsterdam" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.98748809100000001" green="0.1578921378" blue="0.1132824346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="UOC-yl-zQY" firstAttribute="centerX" secondItem="SZu-xp-IO9" secondAttribute="centerX" id="5D2-NJ-oEV"/>
+                                            <constraint firstAttribute="width" secondItem="SZu-xp-IO9" secondAttribute="height" multiplier="1:1" id="6Rw-Fa-9SX"/>
+                                            <constraint firstItem="UOC-yl-zQY" firstAttribute="top" secondItem="SZu-xp-IO9" secondAttribute="top" constant="5" id="caC-QW-O9b"/>
+                                            <constraint firstAttribute="bottom" secondItem="UOC-yl-zQY" secondAttribute="bottom" constant="5" id="niF-Uu-63D"/>
+                                            <constraint firstItem="UOC-yl-zQY" firstAttribute="centerY" secondItem="SZu-xp-IO9" secondAttribute="centerY" id="nu0-kZ-AuS"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="B-jet_present" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kyy-2P-W3H">
+                                        <rect key="frame" x="83" y="324" width="248" height="248"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="kyy-2P-W3H" secondAttribute="height" multiplier="1:1" id="vD4-RO-2NU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWu-dM-hnj">
+                                        <rect key="frame" x="0.0" y="545.5" width="414" height="350.5"/>
+                                        <subviews>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fuji" translatesAutoresizingMaskIntoConstraints="NO" id="YSn-9Z-mvW">
+                                                <rect key="frame" x="207" y="0.0" width="0.0" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="YSn-9Z-mvW" secondAttribute="height" multiplier="1:1" id="Qxz-PO-W3E"/>
+                                                    <constraint firstAttribute="width" id="aG8-F1-ade"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="YSn-9Z-mvW" firstAttribute="top" secondItem="IWu-dM-hnj" secondAttribute="top" id="DXF-Yy-U2d"/>
+                                            <constraint firstItem="YSn-9Z-mvW" firstAttribute="centerX" secondItem="IWu-dM-hnj" secondAttribute="centerX" id="GYn-30-h6J"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IWu-dM-hnj" secondAttribute="trailing" id="45m-08-MXK"/>
+                                    <constraint firstItem="IWu-dM-hnj" firstAttribute="leading" secondItem="5ST-EH-9va" secondAttribute="leading" id="6Jh-z8-Qqi"/>
+                                    <constraint firstItem="kyy-2P-W3H" firstAttribute="width" secondItem="5ST-EH-9va" secondAttribute="width" multiplier="0.6" id="7aL-W7-j2o"/>
+                                    <constraint firstItem="SZu-xp-IO9" firstAttribute="centerY" secondItem="5ST-EH-9va" secondAttribute="centerY" id="7e8-mL-yW0"/>
+                                    <constraint firstItem="SZu-xp-IO9" firstAttribute="width" secondItem="5ST-EH-9va" secondAttribute="width" multiplier="0.35" id="B5d-I1-wUX"/>
+                                    <constraint firstItem="kyy-2P-W3H" firstAttribute="centerX" secondItem="5ST-EH-9va" secondAttribute="centerX" id="JAM-pi-Hid"/>
+                                    <constraint firstAttribute="bottom" secondItem="IWu-dM-hnj" secondAttribute="bottom" id="Z3t-DT-YVf"/>
+                                    <constraint firstItem="kyy-2P-W3H" firstAttribute="centerY" secondItem="5ST-EH-9va" secondAttribute="centerY" id="cWI-iP-kHd"/>
+                                    <constraint firstItem="IWu-dM-hnj" firstAttribute="top" secondItem="SZu-xp-IO9" secondAttribute="bottom" constant="25" id="f4O-ve-ikN"/>
+                                    <constraint firstItem="SZu-xp-IO9" firstAttribute="centerX" secondItem="5ST-EH-9va" secondAttribute="centerX" id="v7H-5G-1su"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5ST-EH-9va" secondAttribute="bottom" id="5JQ-Gp-6zb"/>
+                            <constraint firstItem="5ST-EH-9va" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="P8V-OH-mv1"/>
+                            <constraint firstItem="5ST-EH-9va" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UKM-eM-agH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5ST-EH-9va" secondAttribute="trailing" id="Z7w-iX-LNt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dfW-oH-SUk"/>
+                    <connections>
+                        <outlet property="containerView" destination="5ST-EH-9va" id="zAI-OX-pXU"/>
+                        <outlet property="fujiImageView" destination="YSn-9Z-mvW" id="GMx-iQ-sfd"/>
+                        <outlet property="fujiImageWidthCons" destination="aG8-F1-ade" id="0zL-bo-LTX"/>
+                        <outlet property="jLingoLbl" destination="UOC-yl-zQY" id="IcQ-Wu-UfZ"/>
+                        <outlet property="mountfujiView" destination="IWu-dM-hnj" id="QJs-j7-F6j"/>
+                        <outlet property="roundView" destination="SZu-xp-IO9" id="oDj-rO-Njn"/>
+                        <outlet property="roundViewCenterY" destination="7e8-mL-yW0" id="T0C-VQ-2SB"/>
+                        <outlet property="sunImageView" destination="kyy-2P-W3H" id="w0s-B3-b0N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="85.714285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2hK-lY-UQp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3PD-Mk-v57" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aGY-NX-sTt">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k4x-gp-w4A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZY-cy-RHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="B-jet_present" width="500" height="500"/>
+        <image name="fuji" width="1280" height="717"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

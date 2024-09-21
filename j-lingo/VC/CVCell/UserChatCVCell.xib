@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserChatCVCell" id="gTV-IL-0wX" customClass="UserChatCVCell" customModule="j_lingo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="220" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1X-AG-2jW">
+                        <rect key="frame" x="117" y="5" width="88" height="150"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHR-Bt-oFe">
+                                <rect key="frame" x="0.0" y="5" width="83" height="140"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" name="github2"/>
+                        <constraints>
+                            <constraint firstItem="NHR-Bt-oFe" firstAttribute="leading" secondItem="b1X-AG-2jW" secondAttribute="leading" id="Fe3-rc-hnv"/>
+                            <constraint firstAttribute="trailing" secondItem="NHR-Bt-oFe" secondAttribute="trailing" constant="5" id="YU2-AO-t1G"/>
+                            <constraint firstItem="NHR-Bt-oFe" firstAttribute="top" secondItem="b1X-AG-2jW" secondAttribute="top" constant="5" id="ZjV-tq-dCI"/>
+                            <constraint firstAttribute="bottom" secondItem="NHR-Bt-oFe" secondAttribute="bottom" constant="5" id="yE0-K1-RVR"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="b1X-AG-2jW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="F1H-Ak-EHX"/>
+                <constraint firstAttribute="bottom" secondItem="b1X-AG-2jW" secondAttribute="bottom" constant="5" id="LJ3-44-WXt"/>
+                <constraint firstItem="b1X-AG-2jW" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.4" id="OGg-6h-AeE"/>
+                <constraint firstAttribute="trailing" secondItem="b1X-AG-2jW" secondAttribute="trailing" constant="15" id="exl-EC-CJw"/>
+            </constraints>
+            <size key="customSize" width="220" height="160"/>
+            <connections>
+                <outlet property="parentHolderView" destination="b1X-AG-2jW" id="1Qj-5T-xF7"/>
+                <outlet property="txtview" destination="NHR-Bt-oFe" id="sh4-WK-6gO"/>
+            </connections>
+            <point key="canvasLocation" x="260.86956521739131" y="94.419642857142847"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="github2">
+            <color red="0.60784313725490191" green="0.9137254901960784" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

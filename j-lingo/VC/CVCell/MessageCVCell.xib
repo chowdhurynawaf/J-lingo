@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MessageCVCell" customModule="j_lingo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="449" height="246"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="449" height="246"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcd-RH-Dcg">
+                        <rect key="frame" x="0.0" y="0.0" width="449" height="246"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i8g-Uw-7sV">
+                                <rect key="frame" x="10" y="216" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="QZK-gE-awx"/>
+                                    <constraint firstAttribute="height" constant="25" id="dDN-nd-4dI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="12.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="quD-1j-GxN">
+                                <rect key="frame" x="45" y="128" width="179.5" height="113"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.29830791140000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xj5-ac-CaO">
+                                <rect key="frame" x="259.5" y="5" width="179.5" height="123"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="0.2000554571" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xj5-ac-CaO" firstAttribute="width" secondItem="tcd-RH-Dcg" secondAttribute="width" multiplier="0.4" id="56a-nx-gG6"/>
+                            <constraint firstAttribute="trailing" secondItem="Xj5-ac-CaO" secondAttribute="trailing" constant="10" id="8k5-dw-g9I"/>
+                            <constraint firstItem="quD-1j-GxN" firstAttribute="leading" secondItem="i8g-Uw-7sV" secondAttribute="trailing" constant="10" id="E8D-lP-5oI"/>
+                            <constraint firstItem="quD-1j-GxN" firstAttribute="width" secondItem="tcd-RH-Dcg" secondAttribute="width" multiplier="0.4" id="Sab-du-DdW"/>
+                            <constraint firstAttribute="bottom" secondItem="i8g-Uw-7sV" secondAttribute="bottom" constant="5" id="TnH-Yz-kc8"/>
+                            <constraint firstItem="Xj5-ac-CaO" firstAttribute="height" secondItem="tcd-RH-Dcg" secondAttribute="height" multiplier="0.5" id="Tvu-RA-pfW"/>
+                            <constraint firstItem="i8g-Uw-7sV" firstAttribute="leading" secondItem="tcd-RH-Dcg" secondAttribute="leading" constant="10" id="bJW-Vg-aor"/>
+                            <constraint firstItem="quD-1j-GxN" firstAttribute="bottom" secondItem="i8g-Uw-7sV" secondAttribute="bottom" id="bbp-IA-881"/>
+                            <constraint firstItem="Xj5-ac-CaO" firstAttribute="top" secondItem="tcd-RH-Dcg" secondAttribute="top" constant="5" id="swP-RK-k7G"/>
+                            <constraint firstItem="quD-1j-GxN" firstAttribute="top" secondItem="Xj5-ac-CaO" secondAttribute="bottom" id="y4F-gW-m8l"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="tcd-RH-Dcg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PDE-s4-OYe"/>
+                <constraint firstItem="tcd-RH-Dcg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Yoz-Zd-ZJd"/>
+                <constraint firstAttribute="trailing" secondItem="tcd-RH-Dcg" secondAttribute="trailing" id="dHX-Gr-XNs"/>
+                <constraint firstAttribute="bottom" secondItem="tcd-RH-Dcg" secondAttribute="bottom" id="pTd-3O-W2G"/>
+            </constraints>
+            <size key="customSize" width="449" height="246"/>
+            <connections>
+                <outlet property="img" destination="i8g-Uw-7sV" id="hLf-Bw-iSd"/>
+                <outlet property="p1textView" destination="Xj5-ac-CaO" id="VIz-lD-INY"/>
+                <outlet property="p2textView" destination="quD-1j-GxN" id="miq-6S-tnA"/>
+            </connections>
+            <point key="canvasLocation" x="315.21739130434787" y="97.098214285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

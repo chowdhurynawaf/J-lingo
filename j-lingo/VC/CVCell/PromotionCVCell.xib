@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PromotionCVCell" id="gTV-IL-0wX" customClass="PromotionCVCell" customModule="j_lingo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="190"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pu3-2T-epZ">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="190"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRm-aL-1yX" customClass="DesignableView" customModule="j_lingo" customModuleProvider="target">
+                                <rect key="frame" x="10" y="0.0" width="270" height="190"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4dc-XE-gfa">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="190"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="4dc-XE-gfa" firstAttribute="leading" secondItem="dRm-aL-1yX" secondAttribute="leading" id="5EL-1P-7aR"/>
+                                    <constraint firstAttribute="bottom" secondItem="4dc-XE-gfa" secondAttribute="bottom" id="AXE-AV-OtY"/>
+                                    <constraint firstAttribute="trailing" secondItem="4dc-XE-gfa" secondAttribute="trailing" id="bk6-z4-Pq6"/>
+                                    <constraint firstItem="4dc-XE-gfa" firstAttribute="top" secondItem="dRm-aL-1yX" secondAttribute="top" id="t4E-el-6PN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dRm-aL-1yX" secondAttribute="trailing" id="S69-ab-ohw"/>
+                            <constraint firstItem="dRm-aL-1yX" firstAttribute="top" secondItem="pu3-2T-epZ" secondAttribute="top" id="WGe-nf-juJ"/>
+                            <constraint firstAttribute="bottom" secondItem="dRm-aL-1yX" secondAttribute="bottom" id="ZxA-Iy-f5P"/>
+                            <constraint firstItem="dRm-aL-1yX" firstAttribute="leading" secondItem="pu3-2T-epZ" secondAttribute="leading" constant="10" id="h6m-GH-iTF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="pu3-2T-epZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JBV-9k-MuQ"/>
+                <constraint firstItem="pu3-2T-epZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Z57-bL-x09"/>
+                <constraint firstAttribute="bottom" secondItem="pu3-2T-epZ" secondAttribute="bottom" id="dDp-5s-gT9"/>
+                <constraint firstAttribute="trailing" secondItem="pu3-2T-epZ" secondAttribute="trailing" id="oLx-8x-KGq"/>
+            </constraints>
+            <size key="customSize" width="280" height="190"/>
+            <connections>
+                <outlet property="imgView" destination="4dc-XE-gfa" id="wLP-Ne-qDt"/>
+                <outlet property="parentHolderView" destination="dRm-aL-1yX" id="meC-1t-Vyy"/>
+            </connections>
+            <point key="canvasLocation" x="304.34782608695656" y="133.25892857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

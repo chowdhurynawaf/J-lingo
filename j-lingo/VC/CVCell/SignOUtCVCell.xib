@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SignOUtCVCell" id="gTV-IL-0wX" customClass="SignOUtCVCell" customModule="j_lingo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="203"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="383" height="203"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ImL-PG-sIL">
+                        <rect key="frame" x="0.0" y="0.0" width="383" height="203"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2U-lN-GEd">
+                                <rect key="frame" x="10" y="58" width="363" height="47"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" name="sunred"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedSignOutBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Pzf-rb-I21"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version : 1.8.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgV-bZ-hgt">
+                                <rect key="frame" x="10" y="121" width="363" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Elp-Qg-LYi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wgV-bZ-hgt" firstAttribute="centerX" secondItem="ImL-PG-sIL" secondAttribute="centerX" id="HqS-4Y-cM8"/>
+                            <constraint firstItem="wgV-bZ-hgt" firstAttribute="leading" secondItem="ImL-PG-sIL" secondAttribute="leading" constant="10" id="Myf-e1-FKA"/>
+                            <constraint firstItem="wgV-bZ-hgt" firstAttribute="top" secondItem="E2U-lN-GEd" secondAttribute="bottom" constant="16" id="TnX-GN-SuJ"/>
+                            <constraint firstItem="E2U-lN-GEd" firstAttribute="centerY" secondItem="ImL-PG-sIL" secondAttribute="centerY" constant="-20" id="fcb-nG-9Zj"/>
+                            <constraint firstItem="E2U-lN-GEd" firstAttribute="leading" secondItem="ImL-PG-sIL" secondAttribute="leading" constant="10" id="hve-v4-Y9X"/>
+                            <constraint firstAttribute="trailing" secondItem="wgV-bZ-hgt" secondAttribute="trailing" constant="10" id="jf5-ie-ubN"/>
+                            <constraint firstItem="E2U-lN-GEd" firstAttribute="centerX" secondItem="ImL-PG-sIL" secondAttribute="centerX" id="kQv-4z-ZNl"/>
+                            <constraint firstAttribute="trailing" secondItem="E2U-lN-GEd" secondAttribute="trailing" constant="10" id="yg0-Kb-SLn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ImL-PG-sIL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AXG-YN-G5A"/>
+                <constraint firstItem="ImL-PG-sIL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZvM-82-8Yy"/>
+                <constraint firstAttribute="trailing" secondItem="ImL-PG-sIL" secondAttribute="trailing" id="nYV-rc-5GF"/>
+                <constraint firstAttribute="bottom" secondItem="ImL-PG-sIL" secondAttribute="bottom" id="tdt-sJ-PeL"/>
+            </constraints>
+            <size key="customSize" width="383" height="203"/>
+            <connections>
+                <outlet property="signoutBtn" destination="E2U-lN-GEd" id="phN-UD-dBw"/>
+            </connections>
+            <point key="canvasLocation" x="73" y="75"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="sunred">
+            <color red="0.9869999885559082" green="0.15800000727176666" blue="0.11299999803304672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
