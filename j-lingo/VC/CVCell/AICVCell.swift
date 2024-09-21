@@ -16,6 +16,7 @@ class AICVCell: UICollectionViewCell, NibLoadableView {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        txtview.font = UIFont.init(name: Constants.Font.poppins_regular, size: 13)
     }
 
     
