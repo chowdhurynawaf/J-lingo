@@ -13,6 +13,35 @@ final class ResourceVC:  BaseCVVC, UICollectionViewDelegate, UICollectionViewDat
     var dataArr2 : [Book] = Constants.HomeResource.term2Arr
     var dataArr3 : [Book] = Constants.HomeResource.term3Arr
     var dataArr4 : [Book] = Constants.HomeResource.pptxArr
+    
+    let resourcepdfArr : [String] = [
+        
+        Constants.PDFFlags.hiragana,
+        Constants.PDFFlags.katakana,
+        Constants.PDFFlags.kanji,
+        "",
+        Constants.PDFFlags.wx,
+        Constants.PDFFlags.gx,
+        
+    ]
+    
+    let resourcepdfArr2 : [String] = [
+        
+        
+        "",
+        Constants.PDFFlags.wy,
+        Constants.PDFFlags.gy,
+        
+    ]
+    
+    let resourcepdfArr3 : [String] = [
+        
+        "",
+        Constants.PDFFlags.wz,
+        Constants.PDFFlags.gz,
+        
+    ]
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,7 +137,6 @@ extension ResourceVC {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        
         switch section {
         case 0:
             return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
@@ -176,14 +204,35 @@ extension ResourceVC {
         
         switch indexPath.section {
         case 0:
-            let data = dataArr1[indexPath.item]
-            SafariHelper.openURL(data.link, from: self)
+            if(indexPath.item == 3){
+                let data = dataArr1[indexPath.item]
+                SafariHelper.openURL(data.link, from: self)
+            }else{
+                
+                self.pushWithData(ofType: PDFVC.self){ vc in
+                    vc.flag = self.resourcepdfArr[indexPath.item]
+                }
+            }
         case 1:
-            let data = dataArr2[indexPath.item]
-            SafariHelper.openURL(data.link, from: self)
+            if(indexPath.item == 0){
+                let data = dataArr2[indexPath.item]
+                SafariHelper.openURL(data.link, from: self)
+            }else {
+                
+                self.pushWithData(ofType: PDFVC.self){ vc in
+                    vc.flag = self.resourcepdfArr2[indexPath.item]
+                }
+            }
         case 2:
-            let data = dataArr3[indexPath.item]
-            SafariHelper.openURL(data.link, from: self)
+            if(indexPath.item == 0 || indexPath.item == 3){
+                let data = dataArr3[indexPath.item]
+                SafariHelper.openURL(data.link, from: self)
+            }else{
+                
+                self.pushWithData(ofType: PDFVC.self){ vc in
+                    vc.flag = self.resourcepdfArr3[indexPath.item]
+                }
+            }
         case 3:
             let data = dataArr4[indexPath.item]
             SafariHelper.openURL(data.link, from: self)
@@ -191,6 +240,5 @@ extension ResourceVC {
         default:
             print("")
         }
-    
     }
 }

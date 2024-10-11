@@ -24,6 +24,9 @@ extension Constants{
         static let gx = "G_X"
         static let gy = "G_Y"
         static let gz = "G_Z"
+        static let mn = "minaNo"
+        static let genki1 = "Genki1"
+        static let genki2 = "Genki 2"
     
     }
     

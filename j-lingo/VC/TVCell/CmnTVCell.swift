@@ -291,7 +291,14 @@ final class CmnTVCell: UITableViewCell,UICollectionViewDelegate , UICollectionVi
             }
         case CVTag.Books.rawValue :
             if let vc = vc {
-                SafariHelper.openURL("https://www.mountheadoverseas.com/wp-content/uploads/2024/08/Final-Books-for-Japan-language-PDF.docx.pdf?", from: vc)
+                if(indexPath.item == 0){
+                    vc.pushWithData(ofType: PDFVC.self){  vc in
+                       
+                        vc.flag = Constants.PDFFlags.mn
+                    }
+                }else{
+                    SafariHelper.openURL("https://www.mountheadoverseas.com/wp-content/uploads/2024/08/Final-Books-for-Japan-language-PDF.docx.pdf?", from: vc)
+                }
             }
         case CVTag.OClass.rawValue:
             if let vc = vc {

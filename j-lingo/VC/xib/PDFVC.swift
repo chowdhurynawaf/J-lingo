@@ -44,27 +44,36 @@ final class PDFVC: UIViewController {
         switch flag {
         case Constants.PDFFlags.hiragana:
             return "Hiragana"
-            break;
+            
         case Constants.PDFFlags.katakana:
             return "Katakana"
-            break;
+            
         case Constants.PDFFlags.kanji:
             return "Kanji"
-            break;
+         
         case Constants.PDFFlags.wx:
             return "Word Book X"
-            break
+            
         case Constants.PDFFlags.wy:
             return "Word Book Y"
-            break
+           
         case Constants.PDFFlags.wz:
             return "Word Book Z"
-            break
+            
+        case Constants.PDFFlags.gx:
+            return "Grammar Book X"
+            
+        case Constants.PDFFlags.gy:
+            return "Grammar Book Y"
+            
+        case Constants.PDFFlags.gz:
+            return "Grammar Book Z"
+        case Constants.PDFFlags.mn:
+            return "Mina no Nihongo"
+           
         default:
-            print("")
+            return ""
         }
-        
-        return ""
     }
     
     @objc func popvc() {
