@@ -163,6 +163,7 @@
 		528E5CA72CB964A10041CBD3 /* G_X.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CA42CB964A10041CBD3 /* G_X.pdf */; };
 		528E5CA92CB981860041CBD3 /* hiragana.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CA82CB981850041CBD3 /* hiragana.pdf */; };
 		528E5CAD2CB983080041CBD3 /* katakana.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CAC2CB983080041CBD3 /* katakana.pdf */; };
+		528E5CAF2CB998550041CBD3 /* minaNo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CAE2CB998540041CBD3 /* minaNo.pdf */; };
 		5A101997F42A352A4B354399 /* Pods_j_lingo_j_lingoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F18C4A08CD8A4558A67C07 /* Pods_j_lingo_j_lingoUITests.framework */; };
 		D378506E226EE69D7F1483C0 /* Pods_j_lingoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD14E1D6FDE2262E2B63C8A /* Pods_j_lingoTests.framework */; };
 		DD68D71B9A876D1A75BDD110 /* Pods_j_lingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99C9AEE782042F6D3AE624C /* Pods_j_lingo.framework */; };
@@ -349,6 +350,7 @@
 		528E5CA42CB964A10041CBD3 /* G_X.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = G_X.pdf; sourceTree = "<group>"; };
 		528E5CA82CB981850041CBD3 /* hiragana.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hiragana.pdf; sourceTree = "<group>"; };
 		528E5CAC2CB983080041CBD3 /* katakana.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = katakana.pdf; sourceTree = "<group>"; };
+		528E5CAE2CB998540041CBD3 /* minaNo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = minaNo.pdf; sourceTree = "<group>"; };
 		61C51BCC10DB31D51726577B /* Pods-j-lingo-j-lingoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo-j-lingoUITests.debug.xcconfig"; path = "Target Support Files/Pods-j-lingo-j-lingoUITests/Pods-j-lingo-j-lingoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DEF124490A905302364B2B7 /* Pods-j-lingo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo.debug.xcconfig"; path = "Target Support Files/Pods-j-lingo/Pods-j-lingo.debug.xcconfig"; sourceTree = "<group>"; };
 		9C8F9C4C2C8BCF822B8D6944 /* Pods-j-lingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo.release.xcconfig"; path = "Target Support Files/Pods-j-lingo/Pods-j-lingo.release.xcconfig"; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				528E5CA22CB964A00041CBD3 /* G_Y.pdf */,
 				528E5CA32CB964A00041CBD3 /* G_Z.pdf */,
 				528E5C9C2CB964460041CBD3 /* kanji.pdf */,
+				528E5CAE2CB998540041CBD3 /* minaNo.pdf */,
 				525BDBF92C960A060003E0F0 /* Info.plist */,
 				525BDBF12C960A040003E0F0 /* j_lingo.xcdatamodeld */,
 			);
@@ -805,6 +808,7 @@
 				525BDCA02C960EEB0003E0F0 /* MessageCVCell.xib in Resources */,
 				528E5CAD2CB983080041CBD3 /* katakana.pdf in Resources */,
 				525BDCEE2C960F610003E0F0 /* AIVC.xib in Resources */,
+				528E5CAF2CB998550041CBD3 /* minaNo.pdf in Resources */,
 				528E5C932CB9568F0041CBD3 /* w_Z.pdf in Resources */,
 				525BDC392C960E7D0003E0F0 /* Poppins-SemiBold.ttf in Resources */,
 				525BDC7C2C960EEA0003E0F0 /* MessageListCVCell.xib in Resources */,
