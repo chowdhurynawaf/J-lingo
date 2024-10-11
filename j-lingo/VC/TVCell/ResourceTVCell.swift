@@ -23,7 +23,17 @@ final class ResourceTVCell: UITableViewCell , UICollectionViewDelegate , UIColle
     let homeresource : [Book] = [Constants.HomeResource.hiragana,Constants.HomeResource.katakana,Constants.HomeResource.kanji,Constants.HomeResource.textBook1,Constants.HomeResource.textBook2,Constants.HomeResource.textBook3,Constants.HomeResource.word1,Constants.HomeResource.word2,Constants.HomeResource.word3,Constants.HomeResource.grammar1,Constants.HomeResource.grammar2,Constants.HomeResource.grammar3,Constants.HomeResource.grammarNotes]
     let promotionArr : [Promotion] = [Constants.PromotionResource.kanji,Constants.PromotionResource.resume,Constants.PromotionResource.session,Constants.PromotionResource.skill]
     
-
+    let resourcepdfArr : [String] = [
+        Constants.PDFFlags.hiragana,
+        Constants.PDFFlags.katakana,
+        Constants.PDFFlags.kanji,
+        "",
+        "",
+        "",
+        Constants.PDFFlags.wx,
+        Constants.PDFFlags.wy,
+        Constants.PDFFlags.wz,
+    ]
    
     
     override func awakeFromNib() {
@@ -102,9 +112,16 @@ final class ResourceTVCell: UITableViewCell , UICollectionViewDelegate , UIColle
         
         switch cv.tag {
         case CVTag.resource.rawValue:
-            let url = homeresource[indexPath.item].link
-            if let vc = vc {
-                SafariHelper.openURL(url, from: vc)
+            
+            if(indexPath.item == 3 || indexPath.item == 4 || indexPath.item == 5){
+                let url = homeresource[indexPath.item].link
+                if let vc = vc {
+                    SafariHelper.openURL(url, from: vc)
+                }
+            }else {
+                vc!.pushWithData(ofType: PDFVC.self, animated: true) { vc in
+                    vc.flag = self.resourcepdfArr[indexPath.item]
+                }
             }
         case CVTag.promotion.rawValue:
             let url = promotionArr[indexPath.item].link

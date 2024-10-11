@@ -152,6 +152,17 @@
 		525BDD372C960FFE0003E0F0 /* SoftButtonUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BDD362C960FFE0003E0F0 /* SoftButtonUI.swift */; };
 		528D26FC2C9F5D5500BF49C2 /* MCQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D26FA2C9F5D5500BF49C2 /* MCQVC.swift */; };
 		528D26FD2C9F5D5500BF49C2 /* MCQVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528D26FB2C9F5D5500BF49C2 /* MCQVC.xib */; };
+		528E5C932CB9568F0041CBD3 /* w_Z.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5C902CB9568E0041CBD3 /* w_Z.pdf */; };
+		528E5C942CB9568F0041CBD3 /* w_X.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5C912CB9568E0041CBD3 /* w_X.pdf */; };
+		528E5C952CB9568F0041CBD3 /* w_Y.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5C922CB9568F0041CBD3 /* w_Y.pdf */; };
+		528E5C9A2CB958640041CBD3 /* PDFVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E5C982CB958640041CBD3 /* PDFVC.swift */; };
+		528E5C9B2CB958640041CBD3 /* PDFVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528E5C992CB958640041CBD3 /* PDFVC.xib */; };
+		528E5C9F2CB964460041CBD3 /* kanji.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5C9C2CB964460041CBD3 /* kanji.pdf */; };
+		528E5CA52CB964A10041CBD3 /* G_Y.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CA22CB964A00041CBD3 /* G_Y.pdf */; };
+		528E5CA62CB964A10041CBD3 /* G_Z.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CA32CB964A00041CBD3 /* G_Z.pdf */; };
+		528E5CA72CB964A10041CBD3 /* G_X.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CA42CB964A10041CBD3 /* G_X.pdf */; };
+		528E5CA92CB981860041CBD3 /* hiragana.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CA82CB981850041CBD3 /* hiragana.pdf */; };
+		528E5CAD2CB983080041CBD3 /* katakana.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CAC2CB983080041CBD3 /* katakana.pdf */; };
 		5A101997F42A352A4B354399 /* Pods_j_lingo_j_lingoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F18C4A08CD8A4558A67C07 /* Pods_j_lingo_j_lingoUITests.framework */; };
 		D378506E226EE69D7F1483C0 /* Pods_j_lingoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD14E1D6FDE2262E2B63C8A /* Pods_j_lingoTests.framework */; };
 		DD68D71B9A876D1A75BDD110 /* Pods_j_lingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99C9AEE782042F6D3AE624C /* Pods_j_lingo.framework */; };
@@ -327,6 +338,17 @@
 		525BDD362C960FFE0003E0F0 /* SoftButtonUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftButtonUI.swift; sourceTree = "<group>"; };
 		528D26FA2C9F5D5500BF49C2 /* MCQVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCQVC.swift; sourceTree = "<group>"; };
 		528D26FB2C9F5D5500BF49C2 /* MCQVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCQVC.xib; sourceTree = "<group>"; };
+		528E5C902CB9568E0041CBD3 /* w_Z.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = w_Z.pdf; sourceTree = "<group>"; };
+		528E5C912CB9568E0041CBD3 /* w_X.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = w_X.pdf; sourceTree = "<group>"; };
+		528E5C922CB9568F0041CBD3 /* w_Y.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = w_Y.pdf; sourceTree = "<group>"; };
+		528E5C982CB958640041CBD3 /* PDFVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFVC.swift; sourceTree = "<group>"; };
+		528E5C992CB958640041CBD3 /* PDFVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFVC.xib; sourceTree = "<group>"; };
+		528E5C9C2CB964460041CBD3 /* kanji.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = kanji.pdf; sourceTree = "<group>"; };
+		528E5CA22CB964A00041CBD3 /* G_Y.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = G_Y.pdf; sourceTree = "<group>"; };
+		528E5CA32CB964A00041CBD3 /* G_Z.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = G_Z.pdf; sourceTree = "<group>"; };
+		528E5CA42CB964A10041CBD3 /* G_X.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = G_X.pdf; sourceTree = "<group>"; };
+		528E5CA82CB981850041CBD3 /* hiragana.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hiragana.pdf; sourceTree = "<group>"; };
+		528E5CAC2CB983080041CBD3 /* katakana.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = katakana.pdf; sourceTree = "<group>"; };
 		61C51BCC10DB31D51726577B /* Pods-j-lingo-j-lingoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo-j-lingoUITests.debug.xcconfig"; path = "Target Support Files/Pods-j-lingo-j-lingoUITests/Pods-j-lingo-j-lingoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DEF124490A905302364B2B7 /* Pods-j-lingo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo.debug.xcconfig"; path = "Target Support Files/Pods-j-lingo/Pods-j-lingo.debug.xcconfig"; sourceTree = "<group>"; };
 		9C8F9C4C2C8BCF822B8D6944 /* Pods-j-lingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo.release.xcconfig"; path = "Target Support Files/Pods-j-lingo/Pods-j-lingo.release.xcconfig"; sourceTree = "<group>"; };
@@ -423,6 +445,15 @@
 				525BDC2B2C960E550003E0F0 /* fillup.json */,
 				525BDC242C960E2A0003E0F0 /* blackLoader.json */,
 				525BDC252C960E2A0003E0F0 /* chang.gif */,
+				528E5C912CB9568E0041CBD3 /* w_X.pdf */,
+				528E5C922CB9568F0041CBD3 /* w_Y.pdf */,
+				528E5C902CB9568E0041CBD3 /* w_Z.pdf */,
+				528E5CA42CB964A10041CBD3 /* G_X.pdf */,
+				528E5CAC2CB983080041CBD3 /* katakana.pdf */,
+				528E5CA82CB981850041CBD3 /* hiragana.pdf */,
+				528E5CA22CB964A00041CBD3 /* G_Y.pdf */,
+				528E5CA32CB964A00041CBD3 /* G_Z.pdf */,
+				528E5C9C2CB964460041CBD3 /* kanji.pdf */,
 				525BDBF92C960A060003E0F0 /* Info.plist */,
 				525BDBF12C960A040003E0F0 /* j_lingo.xcdatamodeld */,
 			);
@@ -605,6 +636,8 @@
 				525BDCD92C960F5F0003E0F0 /* TemplateVC.xib */,
 				528D26FA2C9F5D5500BF49C2 /* MCQVC.swift */,
 				528D26FB2C9F5D5500BF49C2 /* MCQVC.xib */,
+				528E5C982CB958640041CBD3 /* PDFVC.swift */,
+				528E5C992CB958640041CBD3 /* PDFVC.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -770,7 +803,9 @@
 				525BDCAE2C960EF80003E0F0 /* CmnTVCell.xib in Resources */,
 				525BDC882C960EEB0003E0F0 /* MyLearningCVCell.xib in Resources */,
 				525BDCA02C960EEB0003E0F0 /* MessageCVCell.xib in Resources */,
+				528E5CAD2CB983080041CBD3 /* katakana.pdf in Resources */,
 				525BDCEE2C960F610003E0F0 /* AIVC.xib in Resources */,
+				528E5C932CB9568F0041CBD3 /* w_Z.pdf in Resources */,
 				525BDC392C960E7D0003E0F0 /* Poppins-SemiBold.ttf in Resources */,
 				525BDC7C2C960EEA0003E0F0 /* MessageListCVCell.xib in Resources */,
 				525BDC872C960EEB0003E0F0 /* RoundCVCell.xib in Resources */,
@@ -784,22 +819,28 @@
 				525BDC372C960E7D0003E0F0 /* Poppins-Regular.ttf in Resources */,
 				525BDC9A2C960EEB0003E0F0 /* EmbededVideoCVCell.xib in Resources */,
 				525BDCE42C960F610003E0F0 /* EmailLoginVC.xib in Resources */,
+				528E5CA52CB964A10041CBD3 /* G_Y.pdf in Resources */,
 				525BDCE52C960F610003E0F0 /* ResourceVC.xib in Resources */,
 				525BDCA32C960EEB0003E0F0 /* CourseDetailsCVCell.xib in Resources */,
 				525BDCA52C960EEB0003E0F0 /* WQCVCell.xib in Resources */,
 				525BDD032C960F610003E0F0 /* HomeVC.xib in Resources */,
 				525BDC862C960EEB0003E0F0 /* NotificationCVCell.xib in Resources */,
+				528E5C9F2CB964460041CBD3 /* kanji.pdf in Resources */,
+				528E5C942CB9568F0041CBD3 /* w_X.pdf in Resources */,
 				525BDD232C960FD10003E0F0 /* p3.json in Resources */,
 				525BDCB12C960EF80003E0F0 /* SidebarTVCell.xib in Resources */,
 				525BDC382C960E7D0003E0F0 /* Poppins-Black.ttf in Resources */,
 				525BDD022C960F610003E0F0 /* TemplateVC.xib in Resources */,
 				525BDCF52C960F610003E0F0 /* PracticeVC.xib in Resources */,
 				525BDC942C960EEB0003E0F0 /* ForumCVCell.xib in Resources */,
+				528E5CA72CB964A10041CBD3 /* G_X.pdf in Resources */,
 				525BDC362C960E7D0003E0F0 /* Poppins-Light.ttf in Resources */,
 				525BDC902C960EEB0003E0F0 /* githubCell.xib in Resources */,
+				528E5CA62CB964A10041CBD3 /* G_Z.pdf in Resources */,
 				525BDD0A2C960F610003E0F0 /* MyLearningVC.xib in Resources */,
 				525BDCEF2C960F610003E0F0 /* ChangLoadingView.xib in Resources */,
 				525BDCF72C960F610003E0F0 /* SideBarVC.xib in Resources */,
+				528E5C952CB9568F0041CBD3 /* w_Y.pdf in Resources */,
 				525BDC8A2C960EEB0003E0F0 /* QuizCVCell.xib in Resources */,
 				525BDC842C960EEB0003E0F0 /* CVCellWithButton.xib in Resources */,
 				525BDC9B2C960EEB0003E0F0 /* ContentListCVCell.xib in Resources */,
@@ -814,10 +855,12 @@
 				525BDD252C960FD10003E0F0 /* redWave.json in Resources */,
 				525BDCA42C960EEB0003E0F0 /* AICVCell.xib in Resources */,
 				525BDC792C960EEA0003E0F0 /* ProfileCVCell.xib in Resources */,
+				528E5C9B2CB958640041CBD3 /* PDFVC.xib in Resources */,
 				525BDC1F2C960DE30003E0F0 /* LaunchScreen.storyboard in Resources */,
 				525BDCA12C960EEB0003E0F0 /* LeadershipCVCell.xib in Resources */,
 				525BDC2C2C960E550003E0F0 /* eye.json in Resources */,
 				525BDC3A2C960E7D0003E0F0 /* Amsterdam.ttf in Resources */,
+				528E5CA92CB981860041CBD3 /* hiragana.pdf in Resources */,
 				525BDCEB2C960F610003E0F0 /* ChangVC.xib in Resources */,
 				525BDC7D2C960EEA0003E0F0 /* PromotionCVCell.xib in Resources */,
 				525BDC9E2C960EEB0003E0F0 /* SignOUtCVCell.xib in Resources */,
@@ -951,6 +994,7 @@
 				525BDC982C960EEB0003E0F0 /* githubCell.swift in Sources */,
 				525BDD1C2C960FAF0003E0F0 /* RoundView.swift in Sources */,
 				525BDCAD2C960EF80003E0F0 /* ResourceTVCell.swift in Sources */,
+				528E5C9A2CB958640041CBD3 /* PDFVC.swift in Sources */,
 				525BDD352C960FF00003E0F0 /* TextAppleToastView.swift in Sources */,
 				525BDD052C960F610003E0F0 /* LeadershipByCategoryVC.swift in Sources */,
 				525BDC972C960EEB0003E0F0 /* CourseDetailsCVCell.swift in Sources */,

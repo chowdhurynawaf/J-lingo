@@ -13,6 +13,20 @@ struct Constants{}
 
 extension Constants{
     
+    struct PDFFlags {
+        
+        static let wx = "w_X"
+        static let wy = "w_Y"
+        static let wz = "w_Z"
+        static let hiragana = "hiragana"
+        static let katakana = "katakana"
+        static let kanji = "kanji"
+        static let gx = "G_X"
+        static let gy = "G_Y"
+        static let gz = "G_Z"
+    
+    }
+    
     struct Links {
         static let shareProfile = "https://chowdhurynawaf.github.io/Share_Bjet_Profile/"
     }
