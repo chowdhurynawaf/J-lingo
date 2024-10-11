@@ -150,6 +150,8 @@
 		525BDD342C960FF00003E0F0 /* AppleToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BDD2E2C960FF00003E0F0 /* AppleToastView.swift */; };
 		525BDD352C960FF00003E0F0 /* TextAppleToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BDD2F2C960FF00003E0F0 /* TextAppleToastView.swift */; };
 		525BDD372C960FFE0003E0F0 /* SoftButtonUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BDD362C960FFE0003E0F0 /* SoftButtonUI.swift */; };
+		528D26FC2C9F5D5500BF49C2 /* MCQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D26FA2C9F5D5500BF49C2 /* MCQVC.swift */; };
+		528D26FD2C9F5D5500BF49C2 /* MCQVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528D26FB2C9F5D5500BF49C2 /* MCQVC.xib */; };
 		5A101997F42A352A4B354399 /* Pods_j_lingo_j_lingoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F18C4A08CD8A4558A67C07 /* Pods_j_lingo_j_lingoUITests.framework */; };
 		D378506E226EE69D7F1483C0 /* Pods_j_lingoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD14E1D6FDE2262E2B63C8A /* Pods_j_lingoTests.framework */; };
 		DD68D71B9A876D1A75BDD110 /* Pods_j_lingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99C9AEE782042F6D3AE624C /* Pods_j_lingo.framework */; };
@@ -323,6 +325,8 @@
 		525BDD2E2C960FF00003E0F0 /* AppleToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleToastView.swift; sourceTree = "<group>"; };
 		525BDD2F2C960FF00003E0F0 /* TextAppleToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAppleToastView.swift; sourceTree = "<group>"; };
 		525BDD362C960FFE0003E0F0 /* SoftButtonUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftButtonUI.swift; sourceTree = "<group>"; };
+		528D26FA2C9F5D5500BF49C2 /* MCQVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCQVC.swift; sourceTree = "<group>"; };
+		528D26FB2C9F5D5500BF49C2 /* MCQVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCQVC.xib; sourceTree = "<group>"; };
 		61C51BCC10DB31D51726577B /* Pods-j-lingo-j-lingoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo-j-lingoUITests.debug.xcconfig"; path = "Target Support Files/Pods-j-lingo-j-lingoUITests/Pods-j-lingo-j-lingoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DEF124490A905302364B2B7 /* Pods-j-lingo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo.debug.xcconfig"; path = "Target Support Files/Pods-j-lingo/Pods-j-lingo.debug.xcconfig"; sourceTree = "<group>"; };
 		9C8F9C4C2C8BCF822B8D6944 /* Pods-j-lingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo.release.xcconfig"; path = "Target Support Files/Pods-j-lingo/Pods-j-lingo.release.xcconfig"; sourceTree = "<group>"; };
@@ -599,6 +603,8 @@
 				525BDCCE2C960F5C0003E0F0 /* SideBarVC.xib */,
 				525BDCBD2C960F590003E0F0 /* TemplateVC.swift */,
 				525BDCD92C960F5F0003E0F0 /* TemplateVC.xib */,
+				528D26FA2C9F5D5500BF49C2 /* MCQVC.swift */,
+				528D26FB2C9F5D5500BF49C2 /* MCQVC.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -754,6 +760,7 @@
 				525BDC272C960E2B0003E0F0 /* blackLoader.json in Resources */,
 				525BDD062C960F610003E0F0 /* ForgotPasswordVC.xib in Resources */,
 				525BDC892C960EEB0003E0F0 /* MonthchangerCVCell.xib in Resources */,
+				528D26FD2C9F5D5500BF49C2 /* MCQVC.xib in Resources */,
 				525BDC9F2C960EEB0003E0F0 /* CourseoptionsCVCell.xib in Resources */,
 				525BDC202C960DE30003E0F0 /* Main.storyboard in Resources */,
 				525BDD262C960FD10003E0F0 /* whiteLoader.json in Resources */,
@@ -1008,6 +1015,7 @@
 				525BDCED2C960F610003E0F0 /* ForumVC.swift in Sources */,
 				525BDD092C960F610003E0F0 /* ChangVC.swift in Sources */,
 				525BDD042C960F610003E0F0 /* EmailLoginVC.swift in Sources */,
+				528D26FC2C9F5D5500BF49C2 /* MCQVC.swift in Sources */,
 				525BDCB82C960F3F0003E0F0 /* MoreVC.swift in Sources */,
 				525BDC7F2C960EEA0003E0F0 /* ContentListCVCell.swift in Sources */,
 				525BDCFF2C960F610003E0F0 /* ProfileVC.swift in Sources */,

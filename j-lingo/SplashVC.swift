@@ -34,10 +34,10 @@ final class SplashVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.movetoGames()
+        //self.movetoGames()
         //self.animateWholeView()
         //self.move()
-        //self.gotoTabBar()
+        self.gotoTabBar()
         
     }
     

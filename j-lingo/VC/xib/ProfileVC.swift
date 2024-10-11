@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import SafariServices
 
 final class ProfileVC: BaseCVVC, UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     
-    var settingNameArr = ["Settings", "Theme" , "Push Notification" , "Privacy and Security" ,"Help & Feedback"]
+    var settingNameArr = ["Settings", "Theme" , "Push Notification" , "Privacy and Security" ,"Help & Feedback", "Share Profile"]
     var isFlipped : Bool = false
 
     override func viewDidLoad() {
@@ -42,9 +43,16 @@ final class ProfileVC: BaseCVVC, UICollectionViewDelegate, UICollectionViewDataS
 
 extension ProfileVC {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    if (indexPath.section == 1 && indexPath.item == 5 ){
+        SafariHelper.openURL(Constants.Links.shareProfile, from: self)
     }
+}
+    
+func numberOfSections(in collectionView: UICollectionView) -> Int {
+    return 3
+}
 
 func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
@@ -112,6 +120,4 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
         
        
     }
-    
-
 }

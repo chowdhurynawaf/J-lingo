@@ -13,6 +13,9 @@ struct Constants{}
 
 extension Constants{
     
+    struct Links {
+        static let shareProfile = "https://chowdhurynawaf.github.io/Share_Bjet_Profile/"
+    }
 
     struct Kanji  {
         
