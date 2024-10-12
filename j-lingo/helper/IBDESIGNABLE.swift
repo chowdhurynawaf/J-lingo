@@ -244,3 +244,244 @@ class DesignableView: UIView {
         gradientLayer?.cornerRadius = layer.cornerRadius
     }
 }
+
+@IBDesignable class RoundButton : UIButton{
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        sharedInit()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        sharedInit()
+    }
+
+    override func prepareForInterfaceBuilder() {
+        sharedInit()
+    }
+
+    func sharedInit() {
+        refreshCorners(value: cornerRadius)
+    }
+
+    func refreshCorners(value: CGFloat) {
+        layer.cornerRadius = value
+    }
+
+    @IBInspectable var cornerRadius: CGFloat = 15 {
+        didSet {
+            refreshCorners(value: cornerRadius)
+        }
+    }
+}
+
+@IBDesignable
+class CustomButton: UIButton {
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            self.layer.cornerRadius = cornerRadius
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            self.layer.borderWidth = borderWidth
+        }
+    }
+    @IBInspectable var borderColor: UIColor = UIColor.black {
+        didSet {
+            self.layer.borderColor = borderColor.cgColor
+        }
+    }
+    // for shadow
+    @IBInspectable var shadowColor: UIColor = UIColor.black {
+        didSet {
+            self.layer.shadowColor = shadowColor.cgColor
+        }
+    }
+    @IBInspectable var shadowOffset: CGSize = CGSize(width: 0, height: 0) {
+        didSet {
+            self.layer.shadowOffset = shadowOffset
+        }
+    }
+    @IBInspectable var shadowOpacity: Float = 0 {
+        didSet {
+            self.layer.shadowOpacity = shadowOpacity
+        }
+    }
+    @IBInspectable var shadowRadius: CGFloat = 0 {
+        didSet {
+            self.layer.shadowRadius = shadowRadius
+        }
+    }
+    
+    @IBInspectable var leftImg: UIImage? = nil {
+        didSet {
+            /* reset title */
+            setAttributedTitle()
+        }
+    }
+
+    @IBInspectable var rightImg: UIImage? = nil {
+        didSet {
+            /* reset title */
+            setAttributedTitle()
+        }
+    }
+    
+    
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setAttributedTitle()
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setAttributedTitle()
+    }
+
+    private func setAttributedTitle() {
+        var attributedTitle = NSMutableAttributedString()
+
+        /* Attaching first image */
+        if let leftImg = leftImg {
+            let leftAttachment = NSTextAttachment(data: nil, ofType: nil)
+            leftAttachment.image = leftImg
+            let attributedString = NSAttributedString(attachment: leftAttachment)
+            let mutableAttributedString = NSMutableAttributedString(attributedString: attributedString)
+
+            if let title = self.currentTitle {
+                mutableAttributedString.append(NSAttributedString(string: title))
+            }
+            attributedTitle = mutableAttributedString
+        }
+
+        /* Attaching second image */
+        if let rightImg = rightImg {
+            let leftAttachment = NSTextAttachment(data: nil, ofType: nil)
+            leftAttachment.image = rightImg
+            let attributedString = NSAttributedString(attachment: leftAttachment)
+            let mutableAttributedString = NSMutableAttributedString(attributedString: attributedString)
+            attributedTitle.append(mutableAttributedString)
+        }
+
+        /* Finally, lets have that two-imaged button! */
+        self.setAttributedTitle(attributedTitle, for: .normal)
+    }
+    
+}
+
+
+@IBDesignable
+class CustomView: UIView {
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            self.layer.cornerRadius = cornerRadius
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            self.layer.borderWidth = borderWidth
+        }
+    }
+    @IBInspectable var borderColor: UIColor = UIColor.black {
+        didSet {
+            self.layer.borderColor = borderColor.cgColor
+        }
+    }
+    // for shadow
+    @IBInspectable var shadowColor: UIColor = UIColor.black {
+        didSet {
+            self.layer.shadowColor = shadowColor.cgColor
+        }
+    }
+    @IBInspectable var shadowOffset: CGSize = CGSize(width: 0, height: 0) {
+        didSet {
+            self.layer.shadowOffset = shadowOffset
+        }
+    }
+    @IBInspectable var shadowOpacity: Float = 0 {
+        didSet {
+            self.layer.shadowOpacity = shadowOpacity
+        }
+    }
+    @IBInspectable var shadowRadius: CGFloat = 0 {
+        didSet {
+            self.layer.shadowRadius = shadowRadius
+        }
+    }
+}
+
+
+
+
+@IBDesignable class RoundImageView: UIImageView {
+    private var _round = false
+    private var _borderColor = UIColor.clear
+    private var _borderWidth: CGFloat = 0
+
+    @IBInspectable var round: Bool {
+        set {
+            _round = newValue
+            makeRound()
+        }
+        get {
+            return self._round
+        }
+    }
+
+    @IBInspectable var borderColor: UIColor {
+        set {
+            _borderColor = newValue
+            setBorderColor()
+        }
+        get {
+            return self._borderColor
+        }
+    }
+
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            _borderWidth = newValue
+            setBorderWidth()
+        }
+        get {
+            return self._borderWidth
+        }
+    }
+
+    override internal var frame: CGRect {
+        set {
+            super.frame = newValue
+            makeRound()
+        }
+        get {
+            return super.frame
+        }
+    }
+
+    private func makeRound() {
+        if self.round {
+            self.clipsToBounds = true
+            self.layer.cornerRadius = (self.frame.width + self.frame.height) / 4
+        } else {
+            self.layer.cornerRadius = 0
+        }
+    }
+
+    private func setBorderColor() {
+        self.layer.borderColor = self._borderColor.cgColor
+    }
+
+    private func setBorderWidth() {
+        self.layer.borderWidth = self._borderWidth
+    }
+}
+
+extension CGFloat {
+    var degreesToRadians: CGFloat { return self * .pi / 180 }
+    var radiansToDegrees: CGFloat { return self * 180 / .pi }
+}

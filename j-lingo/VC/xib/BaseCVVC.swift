@@ -82,6 +82,4 @@ class BaseCVVC: UIViewController {
         return columnLayout
         
     }
-    
-
 }
