@@ -57,13 +57,13 @@ final class PracticeVC:UIViewController{
         
         if str == dic[current]?.lowercased(){
             resultLabel.text = "Correct"
-            resultLabel.zoomIn(duration: 0.3) { _ in
+            resultLabel.zoomIn(duration: 0.5) { _ in
                 self.showNext()
             }
         }else {
             resultLabel.text = "Incorrect. Try again."
             inputTextField.text = ""
-            resultLabel.zoomIn(duration: 0.3) { _ in
+            resultLabel.zoomIn(duration: 0.5) { _ in
                 self.resultLabel.text = ""
             }
         }

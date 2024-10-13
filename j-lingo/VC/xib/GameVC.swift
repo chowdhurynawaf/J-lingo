@@ -99,7 +99,9 @@ extension GameVC {
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case 3:
-            pushWithData(ofType: PracticeVC.self){ vc in
+            pushWithData(ofType: OptionsVC.self){ vc in
+                vc.img = "furigana"
+                vc.arr = Constants.Practice.furiganaArr
                 vc.flag = PracticeFlag.kanji.rawValue
             }
             break

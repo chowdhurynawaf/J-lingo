@@ -12,6 +12,7 @@ final class MyLearningVC:  BaseCVVC, UICollectionViewDelegate, UICollectionViewD
     
     var dataArr : [Course] = [Constants.Courses.c1,Constants.Courses.c2,Constants.Courses.c3,Constants.Courses.c4,Constants.Courses.c5,Constants.Courses.c6,Constants.Courses.c7,Constants.Courses.c8]
     var fromEnroll:Bool?
+    var percentageArr : [Int] = [0,0,95,20,34,20,0,80]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +36,8 @@ final class MyLearningVC:  BaseCVVC, UICollectionViewDelegate, UICollectionViewD
                 backBtn.tintColor = .white
             }
         }
-        
-       }
-  }
+    }
+}
 
 
 extension MyLearningVC {
@@ -58,21 +58,34 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     
     cv.applyScrollingAnimation(to: cell, at: indexPath, with: .squeezeOut)
     
-    if indexPath.item % 2 == 0{
-        
-        cell.percentageHolderView.isHidden = false
-        let percentage = Int.random(in: 1...100)
-        cell.percentageView.fillWithColor(Constants.Colors.appcolor, percentage: CGFloat(percentage) / 100.0,isHorizontal: true)
-        cell.percentageLbl.text = "\(percentage)%"
-        cell.btnView.isHidden = true
-        
-       
-    }else if indexPath.item % 3 == 0{
+//    if indexPath.item % 2 == 0{
+//
+//        cell.percentageHolderView.isHidden = false
+//        let percentage = Int.random(in: 1...100)
+//        cell.percentageView.fillWithColor(Constants.Colors.appcolor, percentage: CGFloat(percentage) / 100.0,isHorizontal: true)
+//        cell.percentageLbl.text = "\(percentage)%"
+//        cell.btnView.isHidden = true
+//
+//
+//    }else if indexPath.item % 3 == 0{
+//        cell.percentageHolderView.isHidden = true
+//        cell.btnView.isHidden = false
+//    }else{
+//        cell.percentageHolderView.isHidden = true
+//        cell.btnView.isHidden = false
+//    }
+    
+    let percentage = percentageArr[indexPath.item]
+    
+    if percentage == 0 {
         cell.percentageHolderView.isHidden = true
         cell.btnView.isHidden = false
     }else{
-        cell.percentageHolderView.isHidden = true
-        cell.btnView.isHidden = false
+        
+        cell.percentageHolderView.isHidden = false
+        cell.percentageLbl.text = "\(percentage)%"
+        cell.percentageView.fillWithColor(Constants.Colors.appcolor, percentage: CGFloat(percentage) / 100.0,isHorizontal: true)
+        cell.btnView.isHidden = true
     }
     
     return cell
@@ -114,7 +127,6 @@ func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElem
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         pushViewController(ofType: EnrolledCourseVC.self)
+        
     }
-
-
 }

@@ -165,6 +165,7 @@
 		528E5CAD2CB983080041CBD3 /* katakana.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CAC2CB983080041CBD3 /* katakana.pdf */; };
 		528E5CAF2CB998550041CBD3 /* minaNo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CAE2CB998540041CBD3 /* minaNo.pdf */; };
 		528E5CB32CBA506D0041CBD3 /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E5CB22CBA506D0041CBD3 /* ColumnFlowLayout.swift */; };
+		529DDF2F2CBA884200D30FBE /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DDF2E2CBA884200D30FBE /* OptionsVC.swift */; };
 		5A101997F42A352A4B354399 /* Pods_j_lingo_j_lingoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F18C4A08CD8A4558A67C07 /* Pods_j_lingo_j_lingoUITests.framework */; };
 		D378506E226EE69D7F1483C0 /* Pods_j_lingoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD14E1D6FDE2262E2B63C8A /* Pods_j_lingoTests.framework */; };
 		DD68D71B9A876D1A75BDD110 /* Pods_j_lingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99C9AEE782042F6D3AE624C /* Pods_j_lingo.framework */; };
@@ -353,6 +354,7 @@
 		528E5CAC2CB983080041CBD3 /* katakana.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = katakana.pdf; sourceTree = "<group>"; };
 		528E5CAE2CB998540041CBD3 /* minaNo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = minaNo.pdf; sourceTree = "<group>"; };
 		528E5CB22CBA506D0041CBD3 /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
+		529DDF2E2CBA884200D30FBE /* OptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		61C51BCC10DB31D51726577B /* Pods-j-lingo-j-lingoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo-j-lingoUITests.debug.xcconfig"; path = "Target Support Files/Pods-j-lingo-j-lingoUITests/Pods-j-lingo-j-lingoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DEF124490A905302364B2B7 /* Pods-j-lingo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo.debug.xcconfig"; path = "Target Support Files/Pods-j-lingo/Pods-j-lingo.debug.xcconfig"; sourceTree = "<group>"; };
 		9C8F9C4C2C8BCF822B8D6944 /* Pods-j-lingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo.release.xcconfig"; path = "Target Support Files/Pods-j-lingo/Pods-j-lingo.release.xcconfig"; sourceTree = "<group>"; };
@@ -643,6 +645,7 @@
 				528D26FB2C9F5D5500BF49C2 /* MCQVC.xib */,
 				528E5C982CB958640041CBD3 /* PDFVC.swift */,
 				528E5C992CB958640041CBD3 /* PDFVC.xib */,
+				529DDF2E2CBA884200D30FBE /* OptionsVC.swift */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -1013,6 +1016,7 @@
 				525BDCF22C960F610003E0F0 /* EnrolledCourseVC.swift in Sources */,
 				525BDCF82C960F610003E0F0 /* BaseCVVC.swift in Sources */,
 				525BDD0D2C960F830003E0F0 /* Constants.swift in Sources */,
+				529DDF2F2CBA884200D30FBE /* OptionsVC.swift in Sources */,
 				525BDBE92C960A040003E0F0 /* AppDelegate.swift in Sources */,
 				525BDC3F2C960EB00003E0F0 /* SplashVC.swift in Sources */,
 				525BDBF32C960A040003E0F0 /* j_lingo.xcdatamodeld in Sources */,

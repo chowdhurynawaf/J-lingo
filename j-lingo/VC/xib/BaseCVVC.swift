@@ -66,7 +66,7 @@ class BaseCVVC: UIViewController {
         self.showMenu()
     }
     
-    public func createColumnFlowLayout(cellsPerRow: Int = 2,
+    func createColumnFlowLayout(cellsPerRow: Int = 2,
                                        minimumInteritemSpacing: CGFloat = 5,
                                        minimumLineSpacing: CGFloat = 5,
                                        sectionInset: UIEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 5, right: 10)) -> ColumnFlowLayout {
