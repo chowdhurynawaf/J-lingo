@@ -27,7 +27,7 @@ final class AnalysisVC : BaseCVVC , UICollectionViewDelegate, UICollectionViewDa
         ("Listening Exercises", "5"),
         ("Speaking Exercises", "4"),
         ("Writing Exercises", "3"),
-        ("Suggested Improvement", "Focus more on speaking practice")
+        ("Suggested Improvement", "Focus more on speaking")
     ]
 
     
@@ -64,9 +64,9 @@ final class AnalysisVC : BaseCVVC , UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        if indexPath.item == weeklyProgress.count - 1{
-            return CGSize.init(width: Constants.Screen.screenwidth, height: 100)
-        }
+//        if indexPath.item == weeklyProgress.count - 1{
+//            return CGSize.init(width: Constants.Screen.screenwidth, height: 100)
+//        }
         return CGSize.init(width: Constants.Screen.screenwidth, height: 50)
     }
     

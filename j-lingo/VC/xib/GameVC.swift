@@ -105,10 +105,30 @@ extension GameVC {
                 vc.flag = PracticeFlag.kanji.rawValue
             }
             break
+        case 4:
+            pushWithData(ofType: OptionsVC.self) {vc in
+                let arr : [String] = ["noun", "verb", "adverb", "adjective", "conjunction","sixthousand"]
+                vc.imgArr = arr 
+                vc.arr = Constants.Practice.VocabArr
+                vc.flag = PracticeFlag.vocabs.rawValue
+            }
+        case 5:
+            pushWithData(ofType: MCQVC.self){vc in
+                vc.dic = Constants.Practice.grammarTerms
+            }
         case 6:
             pushWithData(ofType: PracticeVC.self) { vc in
                 vc.flag = PracticeFlag.wh.rawValue
             }
+        case 7:
+            pushWithData(ofType: MCQVC.self){vc in
+                vc.dic = Constants.Practice.softwareQuestions
+            }
+        case 8:
+            pushWithData(ofType: MCQVC.self){vc in
+                vc.dic = Constants.Practice.confusionList
+            }
+            
         default:
             print("")
         }
