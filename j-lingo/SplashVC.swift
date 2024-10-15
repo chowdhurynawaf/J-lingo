@@ -35,9 +35,11 @@ final class SplashVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //self.movetoGames()
-        //self.animateWholeView()
+       
         //self.move()
-        self.gotoTabBar()
+        //self.gotoTabBar()
+        
+        setupMainPage()
         
     }
     
@@ -47,6 +49,17 @@ final class SplashVC: UIViewController {
     //MARK: - Selectors
     
     //MARK: - helpers
+    
+    private func setupMainPage() {
+        let u = UserDefaultsHelper()
+        let str = u.retrieveString()
+        
+        if str == "loggedIn" {
+            self.gotoTabBar()
+        }else {
+            self.animateWholeView()
+        }
+    }
     
     private func gotoTabBar(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

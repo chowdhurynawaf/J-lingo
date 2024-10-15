@@ -86,6 +86,10 @@ extension AllMessageVC {
             cell.imgView.image = UIImage.init(named: dummyData[indexPath.row].animationName)
             cell.nameLbl.text = dummyData[indexPath.item].name
             cell.messagelbl.text = dummyData[indexPath.item].message
+                
+                if ((indexPath.item == 4 ) || (indexPath.item == 3))  {
+                cell.activeView.isHidden = false
+            }
             
             return cell
                 

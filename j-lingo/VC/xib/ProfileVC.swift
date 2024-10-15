@@ -78,6 +78,7 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
         return cell
     case 2:
         let cell = cv.dequeueReusableCell(withReuseIdentifier: "SignOUtCVCell", for: indexPath) as! SignOUtCVCell
+        cell.vc = self
         return cell
     default:
         return UICollectionViewCell()

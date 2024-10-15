@@ -14,8 +14,8 @@ final class MessageListCVCell: UICollectionViewCell, NibLoadableView {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var messagelbl: UILabel!
     @IBOutlet var lottieImg: LottieAnimationView!
+    @IBOutlet weak var activeView: CustomView!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         

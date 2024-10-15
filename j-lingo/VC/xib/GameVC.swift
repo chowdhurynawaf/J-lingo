@@ -129,10 +129,16 @@ extension GameVC {
                 vc.dic = Constants.Practice.confusionList
             }
             
+        case 9:
+            pushWithData(ofType: MCQVC.self){vc in
+                
+                vc.dic = Constants.Practice.flagDic
+                vc.flag = "flagBtnHidden"
+                
+            }
+            
         default:
             print("")
         }
-        
-        
     }
 }

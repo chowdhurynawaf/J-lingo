@@ -18,7 +18,10 @@ class MCQVC: UIViewController {
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionD: UIButton!
     @IBOutlet weak var playAgainBtn: UIButton!
+    @IBOutlet weak var flagBtn: CustomButton!
     
+    
+    var flag : String = ""
     var dic: [(String, String)] = []
     var remainingQuestions: [(String, String)] = []
     var currentQuestion: (String, String)?
@@ -27,7 +30,6 @@ class MCQVC: UIViewController {
     
     
   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,17 +53,39 @@ class MCQVC: UIViewController {
     }
     
     
+    @IBAction func tappedFlagBtn(_ sender: Any) {
+        
+        showNextQuestion()
+        UIView.transition(with: self.flagBtn, duration: 0.5, options: .transitionFlipFromBottom, animations: {
+          self.flagBtn.setTitle("Boom....", for: .normal)
+          self.flagBtn.setTitleColor(UIColor.white, for: .normal)
+        }, completion: nil)
+        
+       
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            UIView.transition(with: self.flagBtn, duration: 1.5, options: .transitionFlipFromLeft, animations: {
+              self.flagBtn.setTitle("flag", for: .normal)
+              self.flagBtn.setTitleColor(UIColor.white, for: .normal)
+            },completion: nil)
+            
+        }
+    }
+    
+    func saveDataInFlagDatabase() {
+        
+        let userDefaultsHelper = UserDefaultsHelper()
+        userDefaultsHelper.appendToArray(tuple:currentQuestion!)
+    }
+    
     fileprivate func setupArr() {
         remainingQuestions = dic.map{$0}
         remainingQuestions.shuffle()
         showNextQuestion()
+        
     }
     
     private func checkAnswer(tag:Int) {
     
-        print("o ->" + "\(options)")
-        print("c ->" + "\(currentQuestion)")
-        
         if(currentQuestion!.1 == options[tag-1]){
             correctLbl.text = "Correct"
             correctLbl.zoomIn(duration: 0.7) { _ in
@@ -78,12 +102,16 @@ class MCQVC: UIViewController {
             } else {
                 print("Value not found.")
             }
-           
         }
     }
     
    private func showNextQuestion() {
-            // If no remaining questions, show "All done!"
+       
+       if (flag == "") {
+           self.flagBtn.isHidden = false
+       }else {
+           self.flagBtn.isHidden = true
+       }
             correctLbl.text = ""
             options.removeAll()
             alterOptions.removeAll()

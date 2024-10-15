@@ -94,7 +94,10 @@ final class EmailLoginVC: UIViewController {
     
     @IBAction func loginBtnTapped(_ sender: Any) {
         
+        let u = UserDefaultsHelper()
+        u.saveString(data: "loggedIn")
         self.showChangView()
+    
     }
     
     

@@ -1137,7 +1137,52 @@ extension Constants{
         ]
 
            
-
+        static let flagDic : [(String, String)] = [
+            
+            ("千", "せん"),
+            ("一万円", "いちまんえん"),
+            ("万全の", "ばんぜんの"),
+            ("円い", "まるい"),
+            ("アメリカ人", "アメリカじん"),
+            ("人", "ひと"),
+            ("大人", "おとな"),
+            ("日曜日", "にちようび"),
+            ("日", "ひ"),
+            
+            ("下旬", "Last Ten Days Of The Month, げじゅん"),
+            ("却下", "Rejection, きゃっか"),
+            ("零下", "Below Zero, れいか"),
+            ("下唇", "Lower Lip, したくちびる"),
+            ("陛下", "Your Majesty, へいか"),
+            ("下駄", "Geta, げた"),
+            ("下痢", "Diarrhea, げり"),
+            
+            ("explanation", "説"),
+            ("plan", "案"),
+            ("inside", "内"),
+            ("forget", "忘"),
+            ("face", "顔"),
+            ("feeling", "情"),
+            ("anger", "怒"),
+            ("change", "変"),
+            ("mutual", "相"),
+            ("side", "横"),
+            ("compare", "比"),
+            ("change", "化"),
+            
+            ("すき", "Like, 好き"),
+            ("すごい", "Amazing, 凄い"),
+            ("せかい", "World, 世界"),
+            ("せんたく", "Laundry, 洗濯"),
+            ("そうじ", "Cleaning, 掃除"),
+            ("たかい", "High/Expensive, 高い"),
+            ("たのしい", "Fun, 楽しい"),
+            ("たべる", "To eat, 食べる"),
+            ("ちいさい", "Small, 小さい"),
+            ("ちかい", "Near, 近い"),
+            ("つかう", "To use, 使う"),
+            
+        ]
         
         
         static let compoundKanji: [(String, String)] = [

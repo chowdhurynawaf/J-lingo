@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -79,6 +80,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3G-x6-RS0" customClass="CustomView" customModule="j_lingo" customModuleProvider="target">
+                                <rect key="frame" x="50" y="22" width="10" height="10"/>
+                                <color key="backgroundColor" name="github2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="IJg-Ys-nQy"/>
+                                    <constraint firstAttribute="height" constant="10" id="qqZ-eV-4pw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -86,7 +100,9 @@
                             <constraint firstItem="PD2-M1-e0r" firstAttribute="centerX" secondItem="leC-cr-90H" secondAttribute="centerX" id="3wc-hU-BPr"/>
                             <constraint firstItem="PD2-M1-e0r" firstAttribute="trailing" secondItem="leC-cr-90H" secondAttribute="trailing" id="4At-2l-NNc"/>
                             <constraint firstItem="PD2-M1-e0r" firstAttribute="width" secondItem="leC-cr-90H" secondAttribute="width" id="6DI-hU-v4n"/>
+                            <constraint firstItem="J3G-x6-RS0" firstAttribute="trailing" secondItem="PD2-M1-e0r" secondAttribute="trailing" id="CRQ-IY-X5S"/>
                             <constraint firstAttribute="trailing" secondItem="ANX-Dz-M5m" secondAttribute="trailing" constant="10" id="FE2-An-8Y0"/>
+                            <constraint firstItem="J3G-x6-RS0" firstAttribute="top" secondItem="PD2-M1-e0r" secondAttribute="top" id="HO8-dG-0H3"/>
                             <constraint firstItem="leC-cr-90H" firstAttribute="centerY" secondItem="pqk-Wi-h69" secondAttribute="centerY" id="OuZ-Fv-dZv"/>
                             <constraint firstAttribute="trailing" secondItem="cMp-mX-dew" secondAttribute="trailing" constant="10" id="Q66-9j-w2H"/>
                             <constraint firstItem="PD2-M1-e0r" firstAttribute="top" secondItem="leC-cr-90H" secondAttribute="top" id="Zy3-n6-JdT"/>
@@ -110,15 +126,22 @@
             </constraints>
             <size key="customSize" width="331" height="94"/>
             <connections>
+                <outlet property="activeView" destination="J3G-x6-RS0" id="WaK-Xf-PWI"/>
                 <outlet property="imgView" destination="leC-cr-90H" id="nsX-sd-bRv"/>
                 <outlet property="lottieImg" destination="PD2-M1-e0r" id="VdU-Lu-o28"/>
                 <outlet property="messagelbl" destination="ANX-Dz-M5m" id="Fq7-HJ-Mc6"/>
                 <outlet property="nameLbl" destination="cMp-mX-dew" id="l84-iy-hXP"/>
             </connections>
-            <point key="canvasLocation" x="341.304347826087" y="83.705357142857139"/>
+            <point key="canvasLocation" x="293" y="29"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="PD2-M1-e0r"/>
+    </designables>
     <resources>
+        <namedColor name="github2">
+            <color red="0.60784313725490191" green="0.9137254901960784" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
