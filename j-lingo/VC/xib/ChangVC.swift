@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 import SDWebImage
+import AVFoundation
 
 class ChangVC: UIViewController {
     
@@ -17,6 +18,8 @@ class ChangVC: UIViewController {
     @IBOutlet weak var loadingLbl: UILabel!
     @IBOutlet weak var parentview: UIView!
     
+    var player: AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,12 +27,31 @@ class ChangVC: UIViewController {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(gotoTabBar))
         parentview.addGestureRecognizer(gesture)
         
+        showChang()
+        playMusic()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
-        showChang()
+        
+        
+    }
+ 
+    
+    private func playMusic() {
+        
+            guard let path = Bundle.main.path(forResource: "ch", ofType:"mp3") else {
+                return }
+            let url = URL(fileURLWithPath: path)
+
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                player?.play()
+                
+            } catch let error {
+                print(error.localizedDescription)
+            }
     }
     
     private func showChang() {

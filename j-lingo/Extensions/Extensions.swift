@@ -78,6 +78,107 @@ extension UIViewController {
 
 //MARK: - UIView
 
+extension UIView {
+    func createRotatingCharactersAnimation(characters: [String], layerCount: Int = 5) {
+        let centerX = bounds.width / 2
+        let centerY = bounds.height / 2
+        
+        for (index, character) in characters.prefix(layerCount).enumerated() {
+            let label = UILabel()
+            label.text = character
+            label.textAlignment = .center
+            label.font = UIFont.systemFont(ofSize: 20)
+            label.sizeToFit()
+            
+            let radius = CGFloat(30 + index * 20)
+            label.center = CGPoint(x: centerX, y: centerY - radius)
+            
+            addSubview(label)
+            
+            let orbitAnimation = CAKeyframeAnimation(keyPath: "position")
+            orbitAnimation.path = UIBezierPath(arcCenter: CGPoint(x: centerX, y: centerY),
+                                               radius: radius,
+                                               startAngle: 0,
+                                               endAngle: CGFloat.pi * 2,
+                                               clockwise: true).cgPath
+            orbitAnimation.duration = Double(index + 1) * 2
+            orbitAnimation.repeatCount = .infinity
+            orbitAnimation.calculationMode = .paced
+            orbitAnimation.rotationMode = .rotateAuto
+            
+            let pulseAnimation = CABasicAnimation(keyPath: "transform.scale")
+            pulseAnimation.duration = 1
+            pulseAnimation.fromValue = 0.8
+            pulseAnimation.toValue = 1.2
+            pulseAnimation.autoreverses = true
+            pulseAnimation.repeatCount = .infinity
+            
+            let animationGroup = CAAnimationGroup()
+            animationGroup.animations = [orbitAnimation, pulseAnimation]
+            animationGroup.duration = max(orbitAnimation.duration, pulseAnimation.duration * 2)
+            animationGroup.repeatCount = .infinity
+            
+            label.layer.add(animationGroup, forKey: "rotatingCharacterAnimation")
+        }
+    }
+    
+    func stopRotatingCharactersAnimation() {
+        subviews.forEach { $0.layer.removeAllAnimations() }
+    }
+}
+
+extension UIView {
+    
+    // Function to add rotating and scaling animation
+    func addRotatingLayers(characters: [String], numberOfLayers: Int = 5) {
+        guard characters.count > 0 else { return }
+        
+        for i in 0..<numberOfLayers {
+            let label = UILabel()
+            label.text = characters[i % characters.count] // Cycle through characters
+            label.font = UIFont.systemFont(ofSize: 40)
+            label.textAlignment = .center
+            label.translatesAutoresizingMaskIntoConstraints = false
+            self.addSubview(label)
+            
+            // Center the label in the view
+            label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+            
+            // Set up animation
+            let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+            rotationAnimation.fromValue = 0
+            rotationAnimation.toValue = Double.pi * 2
+            rotationAnimation.duration = 4.0
+            rotationAnimation.repeatCount = .infinity
+            rotationAnimation.autoreverses = true
+            
+            let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+            scaleAnimation.fromValue = 1.0
+            scaleAnimation.toValue = 1.2
+            scaleAnimation.duration = 1.0
+            scaleAnimation.repeatCount = .infinity
+            scaleAnimation.autoreverses = true
+            
+            // Group animations
+            let groupAnimation = CAAnimationGroup()
+            groupAnimation.animations = [rotationAnimation, scaleAnimation]
+            groupAnimation.duration = 4.0
+            groupAnimation.repeatCount = .infinity
+            groupAnimation.autoreverses = true
+            
+            label.layer.add(groupAnimation, forKey: "rotateAndScale")
+        }
+    }
+    
+    // Function to stop the animation
+    func stopRotatingLayers() {
+        self.layer.sublayers?.forEach { $0.removeAllAnimations() }
+        self.subviews.forEach { $0.removeFromSuperview() }
+    }
+}
+
+
 
 
 extension UIView {

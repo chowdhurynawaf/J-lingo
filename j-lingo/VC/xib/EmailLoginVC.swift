@@ -45,7 +45,7 @@ final class EmailLoginVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         credentialHolderView.addNeumorphicEffect()
-        loginBtn.addSoftUIEffectForButton(cornerRadius: 8, themeColor: Constants.Colors.appcolor)
+        loginBtn.addSoftUIEffectForButton(cornerRadius: 12, themeColor: Constants.Colors.appcolor)
         self.animateLoginLbl()
         
     }
@@ -83,12 +83,13 @@ final class EmailLoginVC: UIViewController {
         }
     }
     
-    private func showChangView() {
-        
-        let vc = ChangVC(nibName: "ChangVC", bundle: nil)
+    private func showLoader() {
+        let vc = RotatingCharacterLoaderVC(nibName: "RotatingCharacterLoaderV"
+                                           , bundle: nil)
+        vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
         
+        self.present(vc, animated: true)
     }
     
     
@@ -96,7 +97,7 @@ final class EmailLoginVC: UIViewController {
         
         let u = UserDefaultsHelper()
         u.saveString(data: "loggedIn")
-        self.showChangView()
+        self.showLoader()
     
     }
     

@@ -165,7 +165,12 @@
 		528E5CAD2CB983080041CBD3 /* katakana.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CAC2CB983080041CBD3 /* katakana.pdf */; };
 		528E5CAF2CB998550041CBD3 /* minaNo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 528E5CAE2CB998540041CBD3 /* minaNo.pdf */; };
 		528E5CB32CBA506D0041CBD3 /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E5CB22CBA506D0041CBD3 /* ColumnFlowLayout.swift */; };
+		528F73852CC2D55400FF05B7 /* RotatingCharacterLoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F73832CC2D55400FF05B7 /* RotatingCharacterLoaderVC.swift */; };
+		528F73862CC2D55400FF05B7 /* RotatingCharacterLoaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528F73842CC2D55400FF05B7 /* RotatingCharacterLoaderVC.xib */; };
+		528F73882CC390E500FF05B7 /* CirculerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F73872CC390E500FF05B7 /* CirculerTextView.swift */; };
 		529DDF2F2CBA884200D30FBE /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DDF2E2CBA884200D30FBE /* OptionsVC.swift */; };
+		52B4A2492CC1A29C002BBA2C /* ch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52B4A2482CC1A29C002BBA2C /* ch.mp3 */; };
+		52B4A24B2CC1A2F8002BBA2C /* AudioPlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4A24A2CC1A2F8002BBA2C /* AudioPlayerHelper.swift */; };
 		52B7A19B2CBD64C90052B8FC /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B7A19A2CBD64C90052B8FC /* UserDefaultsHelper.swift */; };
 		5A101997F42A352A4B354399 /* Pods_j_lingo_j_lingoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F18C4A08CD8A4558A67C07 /* Pods_j_lingo_j_lingoUITests.framework */; };
 		D378506E226EE69D7F1483C0 /* Pods_j_lingoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD14E1D6FDE2262E2B63C8A /* Pods_j_lingoTests.framework */; };
@@ -355,7 +360,12 @@
 		528E5CAC2CB983080041CBD3 /* katakana.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = katakana.pdf; sourceTree = "<group>"; };
 		528E5CAE2CB998540041CBD3 /* minaNo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = minaNo.pdf; sourceTree = "<group>"; };
 		528E5CB22CBA506D0041CBD3 /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
+		528F73832CC2D55400FF05B7 /* RotatingCharacterLoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingCharacterLoaderVC.swift; sourceTree = "<group>"; };
+		528F73842CC2D55400FF05B7 /* RotatingCharacterLoaderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RotatingCharacterLoaderVC.xib; sourceTree = "<group>"; };
+		528F73872CC390E500FF05B7 /* CirculerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirculerTextView.swift; sourceTree = "<group>"; };
 		529DDF2E2CBA884200D30FBE /* OptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
+		52B4A2482CC1A29C002BBA2C /* ch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ch.mp3; sourceTree = "<group>"; };
+		52B4A24A2CC1A2F8002BBA2C /* AudioPlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerHelper.swift; sourceTree = "<group>"; };
 		52B7A19A2CBD64C90052B8FC /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		61C51BCC10DB31D51726577B /* Pods-j-lingo-j-lingoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo-j-lingoUITests.debug.xcconfig"; path = "Target Support Files/Pods-j-lingo-j-lingoUITests/Pods-j-lingo-j-lingoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DEF124490A905302364B2B7 /* Pods-j-lingo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-j-lingo.debug.xcconfig"; path = "Target Support Files/Pods-j-lingo/Pods-j-lingo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -463,6 +473,7 @@
 				528E5CA32CB964A00041CBD3 /* G_Z.pdf */,
 				528E5C9C2CB964460041CBD3 /* kanji.pdf */,
 				528E5CAE2CB998540041CBD3 /* minaNo.pdf */,
+				52B4A2482CC1A29C002BBA2C /* ch.mp3 */,
 				525BDBF92C960A060003E0F0 /* Info.plist */,
 				525BDBF12C960A040003E0F0 /* j_lingo.xcdatamodeld */,
 			);
@@ -648,6 +659,8 @@
 				528E5C982CB958640041CBD3 /* PDFVC.swift */,
 				528E5C992CB958640041CBD3 /* PDFVC.xib */,
 				529DDF2E2CBA884200D30FBE /* OptionsVC.swift */,
+				528F73832CC2D55400FF05B7 /* RotatingCharacterLoaderVC.swift */,
+				528F73842CC2D55400FF05B7 /* RotatingCharacterLoaderVC.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -665,6 +678,8 @@
 				525BDD0F2C960FAE0003E0F0 /* WaveView.swift */,
 				528E5CB22CBA506D0041CBD3 /* ColumnFlowLayout.swift */,
 				52B7A19A2CBD64C90052B8FC /* UserDefaultsHelper.swift */,
+				52B4A24A2CC1A2F8002BBA2C /* AudioPlayerHelper.swift */,
+				528F73872CC390E500FF05B7 /* CirculerTextView.swift */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -836,6 +851,7 @@
 				525BDCE52C960F610003E0F0 /* ResourceVC.xib in Resources */,
 				525BDCA32C960EEB0003E0F0 /* CourseDetailsCVCell.xib in Resources */,
 				525BDCA52C960EEB0003E0F0 /* WQCVCell.xib in Resources */,
+				528F73862CC2D55400FF05B7 /* RotatingCharacterLoaderVC.xib in Resources */,
 				525BDD032C960F610003E0F0 /* HomeVC.xib in Resources */,
 				525BDC862C960EEB0003E0F0 /* NotificationCVCell.xib in Resources */,
 				528E5C9F2CB964460041CBD3 /* kanji.pdf in Resources */,
@@ -854,6 +870,7 @@
 				525BDCEF2C960F610003E0F0 /* ChangLoadingView.xib in Resources */,
 				525BDCF72C960F610003E0F0 /* SideBarVC.xib in Resources */,
 				528E5C952CB9568F0041CBD3 /* w_Y.pdf in Resources */,
+				52B4A2492CC1A29C002BBA2C /* ch.mp3 in Resources */,
 				525BDC8A2C960EEB0003E0F0 /* QuizCVCell.xib in Resources */,
 				525BDC842C960EEB0003E0F0 /* CVCellWithButton.xib in Resources */,
 				525BDC9B2C960EEB0003E0F0 /* ContentListCVCell.xib in Resources */,
@@ -1031,6 +1048,7 @@
 				525BDD162C960FAF0003E0F0 /* WaveView.swift in Sources */,
 				525BDD072C960F610003E0F0 /* MyLearningVC.swift in Sources */,
 				525BDC8D2C960EEB0003E0F0 /* MessageCVCell.swift in Sources */,
+				528F73852CC2D55400FF05B7 /* RotatingCharacterLoaderVC.swift in Sources */,
 				52B7A19B2CBD64C90052B8FC /* UserDefaultsHelper.swift in Sources */,
 				525BDCF92C960F610003E0F0 /* ForgotPasswordVC.swift in Sources */,
 				525BDCFD2C960F610003E0F0 /* CourseDetailsVC.swift in Sources */,
@@ -1049,6 +1067,7 @@
 				525BDC9C2C960EEB0003E0F0 /* UserChatCVCell.swift in Sources */,
 				525BDCF42C960F610003E0F0 /* SideBarVC.swift in Sources */,
 				525BDC962C960EEB0003E0F0 /* MessagesTVCell.swift in Sources */,
+				528F73882CC390E500FF05B7 /* CirculerTextView.swift in Sources */,
 				525BDD082C960F610003E0F0 /* NotificationVC.swift in Sources */,
 				525BDC922C960EEB0003E0F0 /* ForumCVCell.swift in Sources */,
 				525BDCFA2C960F610003E0F0 /* ResourceVC.swift in Sources */,
@@ -1075,6 +1094,7 @@
 				525BDCED2C960F610003E0F0 /* ForumVC.swift in Sources */,
 				525BDD092C960F610003E0F0 /* ChangVC.swift in Sources */,
 				525BDD042C960F610003E0F0 /* EmailLoginVC.swift in Sources */,
+				52B4A24B2CC1A2F8002BBA2C /* AudioPlayerHelper.swift in Sources */,
 				528D26FC2C9F5D5500BF49C2 /* MCQVC.swift in Sources */,
 				525BDCB82C960F3F0003E0F0 /* MoreVC.swift in Sources */,
 				525BDC7F2C960EEA0003E0F0 /* ContentListCVCell.swift in Sources */,

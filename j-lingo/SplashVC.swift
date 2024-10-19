@@ -39,7 +39,8 @@ final class SplashVC: UIViewController {
         //self.move()
         //self.gotoTabBar()
         
-        setupMainPage()
+       // setupMainPage()
+        showLoader()
         
     }
     
@@ -49,6 +50,15 @@ final class SplashVC: UIViewController {
     //MARK: - Selectors
     
     //MARK: - helpers
+    
+    private func showLoader() {
+        let vc = RotatingCharacterLoaderVC(nibName: "RotatingCharacterLoaderV"
+                                           , bundle: nil)
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
+        
+        self.present(vc, animated: true)
+    }
     
     private func setupMainPage() {
         let u = UserDefaultsHelper()

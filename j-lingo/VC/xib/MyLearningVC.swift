@@ -56,24 +56,8 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     cell.ContentTitle.text = data.title
     cell.nameLbl.text = data.name
     
-    cv.applyScrollingAnimation(to: cell, at: indexPath, with: .squeezeOut)
+    cv.applyScrollingAnimation(to: cell, at: indexPath, with: .zoomInBounce)
     
-//    if indexPath.item % 2 == 0{
-//
-//        cell.percentageHolderView.isHidden = false
-//        let percentage = Int.random(in: 1...100)
-//        cell.percentageView.fillWithColor(Constants.Colors.appcolor, percentage: CGFloat(percentage) / 100.0,isHorizontal: true)
-//        cell.percentageLbl.text = "\(percentage)%"
-//        cell.btnView.isHidden = true
-//
-//
-//    }else if indexPath.item % 3 == 0{
-//        cell.percentageHolderView.isHidden = true
-//        cell.btnView.isHidden = false
-//    }else{
-//        cell.percentageHolderView.isHidden = true
-//        cell.btnView.isHidden = false
-//    }
     
     let percentage = percentageArr[indexPath.item]
     
