@@ -1,10 +1,3 @@
-//
-//  RotatingCharacterLoaderVC.swift
-//  j-lingo
-//
-//  Created by Macbook Pro on 10/18/24.
-//
-
 import UIKit
 
 class RotatingCharacterLoaderVC: UIViewController {
@@ -13,9 +6,11 @@ class RotatingCharacterLoaderVC: UIViewController {
     @IBOutlet weak var loaderTextView: CircularTextView!
     
     let mixed = [
-        "あ", "い", "う", "え", "お", // Hiragana
-        "ア", "イ", "ウ", "エ", "オ", // Katakana
-        "日", "本", "語", "学", "生" // Kanji
+        "あ", "能" , "う", "え", "お", // Hiragana
+        "ア", "概", "ウ", "エ", "機", // Katakana
+        "日", "本", "語", "学", "生",
+        "風","家", "い","花",
+        "空","雨", "オ"
     ]
     
     let hiragana = [
@@ -23,20 +18,32 @@ class RotatingCharacterLoaderVC: UIViewController {
         "か", "き", "く", "け", "こ",
         "さ", "し", "す", "せ", "そ"
     ]
+    
+    let hindi = [
+        "अ", "आ", "इ", "ई", "उ", // Vowels
+        "ए", "ऐ", "ओ", "औ", "अं", // More vowels
+        "क", "ख", "ग", "घ", "च" // Consonants
+    ]
 
     let katakana = [
         "ア", "イ", "ウ", "エ", "オ", // Katakana
-        "カ", "キ", "ク", "ケ", "コ"
-        
+        "カ", "キ", "ク", "ケ", "コ",
+        "サ", "シ", "ス"// Additional Katakana
     ]
+    
+    let arabic = ["ا", "ب", "ت", "ث", "ج",
+                  "ح", "خ", "د", "ذ", "ر",
+                  "ز", "س", "ش" // Additional letters
+]
 
     let kanji = [
         "日", "月", "火", "水", "木", // Days of the week
-        "金", "土"
+        "金", "土", "犬", "虫"
     ]
 
     let kanjiExtra = [
-        "山", "川", "田", "花", "鳥", // Additional Kanji
+       // "山", "川", "田", "花", "鳥", // Additional Kanji
+        "ক","খ", "অ" ,"উ", "ঙ" , "চ", "ম"
         
     ]
 
@@ -47,6 +54,7 @@ class RotatingCharacterLoaderVC: UIViewController {
         
        
        setLayers()
+       showChangView()
         
     }
     
@@ -55,12 +63,21 @@ class RotatingCharacterLoaderVC: UIViewController {
         loaderTextView.startRotating()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        loaderTextView.stopRotating()
+    }
+    
+    deinit {
+        loaderTextView.stopRotating()
+    }
     
     override func loadView() {
         if let nibView = Bundle.main.loadNibNamed("RotatingCharacterLoaderVC", owner: self, options: nil)?.first as? UIView {
             self.view = nibView
         }
     }
+    
+    
     
     private func setLayers() {
         loaderTextView.layers = [
@@ -76,38 +93,42 @@ class RotatingCharacterLoaderVC: UIViewController {
                    CircularTextView.Layer(
                        texts: kanji,
                        radius: 60,
-                       rotationSpeed: 0.03,
-                       font: UIFont.boldSystemFont(ofSize: 18),
-                       textColor: UIColor.blue,
+                       rotationSpeed: 0.07,
+                       font: UIFont.init(name: Constants.Font.poppins_bold, size: 20)!,
+                       textColor: UIColor(hex: "#000100")!,
                        alpha: 0.8,
-                       direction: .counterclockwise
+                       direction: .autoReverse,
+                       reverseDuration: 2.0
                    ),
                    CircularTextView.Layer(
-                       texts: katakana,
+                       texts: arabic,
                        radius: 90,
-                       rotationSpeed: 0.02,
-                       font: UIFont.italicSystemFont(ofSize: 20),
-                       textColor: UIColor.green,
+                       rotationSpeed: 0.03,
+                       font: UIFont.init(name: Constants.Font.poppins_medium, size: 22)!,
+                       textColor: UIColor.gray,
                        alpha: 0.6,
-                       direction: .clockwise
+                       direction: .autoReverse,
+                       reverseDuration: 2.0
+                       
                    ),
                    CircularTextView.Layer(
-                       texts: hiragana,
+                       texts: hindi,
                        radius: 120,
-                       rotationSpeed: 0.01,
-                       font: UIFont.systemFont(ofSize: 22),
-                       textColor: UIColor.purple,
-                       alpha: 0.4,
+                       rotationSpeed: 0.02,
+                       font: UIFont.init(name: Constants.Font.poppins_bold, size: 23)!,
+                       textColor: UIColor(hex: "#272829")!,
+                       alpha: 0.7,
                        direction: .counterclockwise
+                       
                    ),
                    
                    CircularTextView.Layer(
                        texts: mixed,
                        radius: 150,
-                       rotationSpeed: 0.01,
-                       font: UIFont.systemFont(ofSize: 22),
-                       textColor: UIColor.purple,
-                       alpha: 0.4,
+                       rotationSpeed: 0.05,
+                       font: UIFont.init(name: Constants.Font.poppins_bold, size: 25)!,
+                       textColor: UIColor(hex: "#000100")!,
+                       alpha: 8.0,
                        direction: .clockwise
                    )
                ]
@@ -115,7 +136,7 @@ class RotatingCharacterLoaderVC: UIViewController {
     
     private func showChangView() {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
             let vc = ChangVC(nibName: "ChangVC", bundle: nil)
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)

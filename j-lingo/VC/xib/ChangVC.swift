@@ -17,6 +17,7 @@ class ChangVC: UIViewController {
     @IBOutlet weak var loaderView: LottieAnimationView!
     @IBOutlet weak var loadingLbl: UILabel!
     @IBOutlet weak var parentview: UIView!
+    private var completionHandler: (() -> Void)?
     
     var player: AVAudioPlayer?
     
@@ -28,7 +29,10 @@ class ChangVC: UIViewController {
         parentview.addGestureRecognizer(gesture)
         
         showChang()
-        playMusic()
+        playMusic {
+            
+            self.gotoTabBar()
+        }
         
     }
     
@@ -39,15 +43,18 @@ class ChangVC: UIViewController {
     }
  
     
-    private func playMusic() {
+    private func playMusic(completion: @escaping () -> Void) {
         
+            self.completionHandler = completion
             guard let path = Bundle.main.path(forResource: "ch", ofType:"mp3") else {
                 return }
             let url = URL(fileURLWithPath: path)
 
             do {
                 player = try AVAudioPlayer(contentsOf: url)
+                player?.delegate = self
                 player?.play()
+                
                 
             } catch let error {
                 print(error.localizedDescription)
@@ -133,4 +140,11 @@ class ChangVC: UIViewController {
         }
         return tabBarController
     }
+}
+
+extension ChangVC : AVAudioPlayerDelegate {
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+            completionHandler?()
+        }
 }

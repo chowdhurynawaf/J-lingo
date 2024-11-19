@@ -39,8 +39,8 @@ final class SplashVC: UIViewController {
         //self.move()
         //self.gotoTabBar()
         
-       // setupMainPage()
-        showLoader()
+        setupMainPage()
+        //showLoader()
         
     }
     
