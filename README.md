@@ -30,4 +30,8 @@ Check out the demo video of the app to get a sneak peek at how it works!
 
 ## Screenshots
 
+Here are some screenshots of the Jlingo app in action:
+
+[Screenshot Link](https://drive.google.com/drive/folders/1DOeQwntjHE95K821OtALYnORnpZp24QG?usp=sharing)
+
 
